@@ -1,6 +1,6 @@
 # ========================================
 # FinGate Robots.txt
-# Generated: 2025-11-03T05:56:59.038Z
+# Generated: 2025-11-03T08:42:52.753Z
 # ========================================
 
 User-agent: *
@@ -31,11 +31,11 @@ Allow: /*.webp
 # Disallow: /temp/
 
 # 사이트맵
-Sitemap: https://hyobin86.github.io//sitemap.xml
+Sitemap: https://fingate-company.github.io//sitemap.xml
 
 # 크롤링 지연 (선택사항)
 Crawl-delay: 1
 
 # 추가 사이트맵 (필요시)
-# Sitemap: https://hyobin86.github.io//sitemap-images.xml
-# Sitemap: https://hyobin86.github.io//sitemap-news.xml
+# Sitemap: https://fingate-company.github.io//sitemap-images.xml
+# Sitemap: https://fingate-company.github.io//sitemap-news.xml
