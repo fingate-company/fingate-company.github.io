@@ -15,7 +15,7 @@ export const SITE_CONFIG = {
   locale: 'ko_KR',
   
   // URL 및 이미지
-  baseUrl: 'https://fingate-company.github.io/',
+  baseUrl: 'https://pingate.kr/',
   defaultImage: '/images/services/service2-hero.png',
   favicon: '/favicon.svg',
   
