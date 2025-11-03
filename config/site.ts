@@ -15,7 +15,7 @@ export const SITE_CONFIG = {
   locale: 'ko_KR',
   
   // URL 및 이미지
-  baseUrl: 'https://hyobin86.github.io/',
+  baseUrl: 'https://fingate-company.github.io/',
   defaultImage: '/images/services/service2-hero.png',
   favicon: '/favicon.svg',
   
@@ -37,7 +37,7 @@ export const SITE_CONFIG = {
     serviceId: process.env.NUXT_PUBLIC_EMAILJS_SERVICE_ID || 'service_x6o8pif',
     templateId: process.env.NUXT_PUBLIC_EMAILJS_TEMPLATE_ID || 'template_j1k8hbf',
     publicKey: process.env.NUXT_PUBLIC_EMAILJS_PUBLIC_KEY || 'bGrFCLe7sUtZOAHqu',
-    toEmail: process.env.NUXT_PUBLIC_EMAILJS_TO_EMAIL || 'koko83@fingate.kr'
+    toEmail: process.env.NUXT_PUBLIC_EMAILJS_TO_EMAIL || 'withus@fingate.kr'
   },
   
   // SEO 기본값

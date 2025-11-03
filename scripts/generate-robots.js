@@ -6,7 +6,7 @@ const fs = require('fs')
 const path = require('path')
 
 function generateRobots() {
-  const baseUrl = process.env.NUXT_PUBLIC_BASE_URL || 'https://hyobin86.github.io/'
+  const baseUrl = process.env.NUXT_PUBLIC_BASE_URL || 'https://fingate-company.github.io/'
   
   const robotsTxt = `# ========================================
 # FinGate Robots.txt

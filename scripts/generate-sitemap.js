@@ -6,7 +6,7 @@ const fs = require('fs')
 const path = require('path')
 
 function generateSitemap() {
-  let baseUrl = process.env.NUXT_PUBLIC_BASE_URL || 'https://hyobin86.github.io/'
+  let baseUrl = process.env.NUXT_PUBLIC_BASE_URL || 'https://fingate-company.github.io/'
   // baseUrl 정규화 (끝에 슬래시 제거)
   baseUrl = baseUrl.replace(/\/+$/, '')
   
