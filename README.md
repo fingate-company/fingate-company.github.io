@@ -493,7 +493,7 @@ NUXT_PUBLIC_EMAILJS_TO_EMAIL=your_email@domain.com
    **참고**: `npm run deploy`는 자동으로 `dist/public`의 내용을 `dist` 루트로 이동시킵니다.
 
 3. **배포 URL**
-   - 사이트 주소: `https://pingate.kr/office_homepage/`
+   - 사이트 주소: `https://fingate.kr/office_homepage/`
    - 배포 후 몇 분 정도 소요될 수 있습니다.
 
 4. **주의사항**
