@@ -42,7 +42,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted, nextTick } from 'vue'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
@@ -94,39 +94,56 @@ const subtitleRef = ref<HTMLElement | null>(null)
 const titleRef = ref<HTMLElement | null>(null)
 const descRef = ref<HTMLElement | null>(null)
 
+// 커서 표시 상태 추적
+const isCursorVisible = ref(false)
+
 // 이벤트 위임을 통한 커서 표시 (카드에 마우스 진입 시)
-const handleCardHover = (e: Event) => {
+const handleCardHover = (e: MouseEvent) => {
   const target = e.target as HTMLElement
   const card = target.closest('.company-card')
   
   if (card && customCursor.value) {
-    customCursor.value.classList.add('show')
-  } else if (!card && customCursor.value) {
-    customCursor.value.classList.remove('show')
+    if (!isCursorVisible.value) {
+      customCursor.value.classList.add('show')
+      isCursorVisible.value = true
+      
+      // 커서가 표시된 후 DOM 업데이트를 기다려서 위치 업데이트
+      nextTick(() => {
+        updateCursorPosition(e)
+      })
+    }
   }
 }
 
 // 커스텀 커서 숨기기
 const hideCustomCursor = () => {
-  if (customCursor.value) {
+  if (customCursor.value && isCursorVisible.value) {
     customCursor.value.classList.remove('show')
+    isCursorVisible.value = false
   }
+}
+
+// 커서 위치 업데이트 함수
+const updateCursorPosition = (e: MouseEvent) => {
+  if (!customCursor.value) return
+  
+  // 마우스 위치를 직접 left/top에 설정하고, transform으로 중앙 정렬
+  customCursor.value.style.left = `${e.clientX}px`
+  customCursor.value.style.top = `${e.clientY}px`
 }
 
 // 마우스 이동 이벤트 - requestAnimationFrame으로 최적화
 let rafId: number | null = null
 const handleMouseMove = (e: MouseEvent) => {
-  if (!customCursor.value) return
+  if (!customCursor.value || !isCursorVisible.value) return
   
   // 이전 RAF가 실행 중이면 취소
   if (rafId !== null) return
   
   // RAF를 사용하여 브라우저 렌더링 사이클에 맞춰 업데이트
   rafId = requestAnimationFrame(() => {
-    if (customCursor.value) {
-      // 커서 중앙 정렬: 커서 크기(20rem = 200px)의 절반(100px)을 빼줌
-      customCursor.value.style.transform = 
-        `translate3d(${e.clientX - 100}px, ${e.clientY - 100}px, 0)`
+    if (customCursor.value && isCursorVisible.value) {
+      updateCursorPosition(e)
     }
     rafId = null
   })
