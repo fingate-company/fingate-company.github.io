@@ -1,6 +1,6 @@
 # ========================================
 # FinGate Robots.txt
-# Generated: 2025-11-03T09:01:18.963Z
+# Generated: 2025-11-05T07:07:26.539Z
 # ========================================
 
 User-agent: *
@@ -31,11 +31,11 @@ Allow: /*.webp
 # Disallow: /temp/
 
 # 사이트맵
-Sitemap: https://pingate.kr//sitemap.xml
+Sitemap: https://fingate.kr//sitemap.xml
 
 # 크롤링 지연 (선택사항)
 Crawl-delay: 1
 
 # 추가 사이트맵 (필요시)
-# Sitemap: https://pingate.kr//sitemap-images.xml
-# Sitemap: https://pingate.kr//sitemap-news.xml
+# Sitemap: https://fingate.kr//sitemap-images.xml
+# Sitemap: https://fingate.kr//sitemap-news.xml
