@@ -41,7 +41,6 @@
   .carousel {
     position: relative;
     width: 100%;
-    max-width: 100vw;
     overflow: hidden;
     transition: filter 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     
@@ -217,6 +216,7 @@
   .carousel {
     position: relative;
     width: 100%;
+    overflow: hidden;
     
     .carousel-viewport {
       position: relative;
@@ -227,7 +227,7 @@
       display: flex;
       width: fit-content;
       animation: slide 50s linear infinite;
-      gap: var(--gap, 2.4rem);
+      gap: var(--gap);
       
       &.paused {
         animation-play-state: paused;
@@ -235,7 +235,7 @@
     }
     
     .carousel-slide {
-      flex: 0 0 var(--card-w, 30rem);
+      flex: 0 0 var(--card-w);
       
       .service-card {
         position: relative;
@@ -285,7 +285,7 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-1 * var(--unit, 32.4rem) * 13));
+    transform: translateX(calc(-1 * var(--unit) * 13));
   }
 }
 
@@ -294,7 +294,8 @@
   position: relative;
 
   .container {
-    width: 97.4rem;
+    max-width: 97.4rem;
+    width: 100%;
     padding: 22rem 0 16rem;
     text-align: center;
     @media (min-width: 2560px) {

@@ -89,12 +89,21 @@ const renderServices = computed(() => {
 })
 
 function remToPx(rem: number) {
-  const fs = parseFloat(getComputedStyle(document.documentElement).fontSize || '16')
+  // viewport가 고정되어 있어도 정확한 rem 계산을 위해 실제 root font-size 사용
+  const fs = parseFloat(getComputedStyle(document.documentElement).fontSize || '10')
   return rem * fs
 }
 
 const recalc = () => {
   if (!viewport.value || !track.value) return
+  
+  // 실제 DOM 요소의 크기를 사용하되, viewport가 고정된 경우를 대비해 실제 화면 크기도 고려
+  const actualViewportWidth = viewport.value.clientWidth || viewport.value.getBoundingClientRect().width
+  // viewport가 고정되어 있어도 실제 화면 크기를 기준으로 계산
+  const screenWidth = typeof window !== 'undefined' ? window.innerWidth : actualViewportWidth
+  // container의 max-width를 고려 (1400px)
+  const containerMaxWidth = 1400
+  const effectiveWidth = Math.min(actualViewportWidth, screenWidth, containerMaxWidth)
   
   // 원본 이미지 사이즈 고정 (402px)
   cardPx.value = 402
@@ -106,9 +115,24 @@ const recalc = () => {
   ;(viewport.value as HTMLElement).style.height = `${heightPx}px`
 
   const root = carouselRef.value as HTMLElement
-  root?.style.setProperty('--card-w', `${cardPx.value}px`)
-  root?.style.setProperty('--gap', `${gapPx.value}px`)
-  root?.style.setProperty('--unit', `${unit.value}px`)
+  // 정수 픽셀로 고정하여 sub-pixel 정밀도 문제 방지
+  root?.style.setProperty('--card-w', `${Math.round(cardPx.value)}px`)
+  root?.style.setProperty('--gap', `${Math.round(gapPx.value)}px`)
+  root?.style.setProperty('--unit', `${Math.round(unit.value)}px`)
+  
+  // CSS 변수가 업데이트된 후 애니메이션 재시작
+  if (track.value) {
+    requestAnimationFrame(() => {
+      if (track.value) {
+        track.value.style.animation = 'none'
+        requestAnimationFrame(() => {
+          if (track.value) {
+            track.value.style.animation = 'slide 50s linear infinite'
+          }
+        })
+      }
+    })
+  }
 }
 
 onMounted(() => {
@@ -120,6 +144,22 @@ onMounted(() => {
 
   // 초기 렌더 후 레이아웃 계산
   recalc()
+  
+  // CSS 변수가 설정된 후 애니메이션이 시작되도록 보장
+  if (track.value) {
+    // CSS 변수가 설정될 때까지 잠시 대기
+    requestAnimationFrame(() => {
+      if (track.value) {
+        // 애니메이션 재시작
+        track.value.style.animation = 'none'
+        requestAnimationFrame(() => {
+          if (track.value) {
+            track.value.style.animation = 'slide 50s linear infinite'
+          }
+        })
+      }
+    })
+  }
 
   // GSAP ScrollTrigger 애니메이션 설정
   if (typeof window !== 'undefined') {

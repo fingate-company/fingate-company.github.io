@@ -127,9 +127,6 @@ onMounted(() => {
         // 모든 텍스트와 카드 초기 상태
         gsap.set('.card-center-text, .agenda-card-pair', { opacity: 0 })
 
-        // 되감기 방지용 진행도 상한
-        let maxProgress = 0
-
         const tl = gsap.timeline({
           defaults: { ease: 'none' },
           duration: 1,
@@ -137,17 +134,7 @@ onMounted(() => {
             trigger: agendaUnifiedArea.value,
             start: 'top 80%',
             end: 'bottom 0%',
-            scrub: true,
-            onUpdate: (self) => {
-              // 역스크롤 시 되감기 방지
-              if (self.progress < maxProgress && self.animation) {
-                self.animation.progress(maxProgress)
-                return
-              }
-              const p = self.progress
-              maxProgress = p
-              // activeCardIndex는 더 이상 사용하지 않음 (gsap timeline으로 직접 제어)
-            }
+            scrub: true
           }
         })
 

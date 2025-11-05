@@ -96,7 +96,8 @@ const renderProblems = computed(() => {
 })
 
 function remToPx(rem: number) {
-  const fs = parseFloat(getComputedStyle(document.documentElement).fontSize || '16')
+  // viewport가 고정되어 있어도 정확한 rem 계산을 위해 실제 root font-size 사용
+  const fs = parseFloat(getComputedStyle(document.documentElement).fontSize || '10')
   return rem * fs
 }
 
@@ -106,7 +107,8 @@ const recalc = () => {
   const GAP_REM = 2.4
   const PEEK_REM = 6
 
-  const vpW = viewport.value.clientWidth
+  // 실제 DOM 요소의 크기를 사용 (viewport 메타 태그와 무관)
+  const vpW = viewport.value.clientWidth || viewport.value.getBoundingClientRect().width
   const maxCard = remToPx(CARD_W_REM)
   gapPx.value = Math.round(remToPx(GAP_REM))
   const desiredPeek = Math.round(remToPx(PEEK_REM))
