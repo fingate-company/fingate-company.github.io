@@ -23,6 +23,8 @@ html {
   font-size: 10px; // 1rem = 10px로 설정
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden; // 가로 스크롤 숨김
+  width: 100%;
 }
 
 body {
@@ -33,6 +35,8 @@ body {
   padding: 0;
   background-color: #ffffff;
   min-height: 100vh;
+  overflow-x: hidden; // 가로 스크롤 숨김
+  width: 100%;
   
   input, textarea, select, button {
     font-family: $font-family-primary;
