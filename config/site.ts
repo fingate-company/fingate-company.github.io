@@ -28,7 +28,7 @@ export const SITE_CONFIG = {
     registrationNumber: '349-81-02732',
     email: 'withus@fingate.kr',
     phone: '070-7954-2241',
-    address: '서울 마포구 월드컵북로2길 19 7층 (동교동, W위더스빌딩)',
+    address: '서울특별시 중구 칠패로 28, 3층 (주)핀게이트',
     reserved: 'FINGATE @ 2023. All rights reserved.'
   },
   
