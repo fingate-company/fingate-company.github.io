@@ -502,24 +502,19 @@
     @media (min-width: 2560px) {
       margin-top: 15rem;
     }
-    
-    img {
-      width: 100%;
-      height: auto;
-      object-fit: contain;
-      opacity: 0;
-    }
   }
   
   .partner-logo {
-    max-width: 45rem;
-    height: auto;
+    width: 33.2rem;
+    height: 10.4rem;
     object-fit: contain;
     opacity: 0;
     transition: all 0.3s ease;
+    flex-shrink: 0;
     
     @media (min-width: 2560px) {
-      max-width: 56.25rem;
+      width: 41.5rem;
+      height: 13rem;
     }
   }
 }

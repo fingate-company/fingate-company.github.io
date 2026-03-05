@@ -21,8 +21,8 @@
             :src="`/images/logos/${logo.image}`"
             :alt="logo.name"
             loading="lazy"
-            width="450"
-            height="140"
+            width="332"
+            height="96"
           />
         </div>
       </div>
@@ -78,7 +78,8 @@ const setLogoRef = (el: Element | ComponentPublicInstance | null, index: number)
 const clientLogos: ClientLogo[] = [
   { name: '카카오페이인슈어런스', image: 'kakao-logo-w.png' },
   { name: 'AIA프리미어파트너스', image: 'aia-logo-w.png' },
-  { name: '더베스트', image: 'best-logo-w.png' },
+  { name: 'HK금융파트너스', image: 'hk-logo-w.png' },
+  { name: '더베스트', image: 'best-logo-w.png' }
 ]
 
 onMounted(() => {

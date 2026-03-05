@@ -15,8 +15,8 @@
           :alt="logo.alt"
           :class="['partner-logo', `partner-logo-${index + 1}`]"
           loading="lazy"
-          width="450"
-          height="140"
+          width="332"
+          height="104"
         />
       </div>
     </div>
@@ -55,6 +55,11 @@ const partnerLogos = [
     id: 'best',
     src: '/images/logos/best-logo.png',
     alt: 'BEST 생명보험 로고'
+  },
+  {
+    id: 'hk',
+    src: '/images/logos/hk-logo.png',
+    alt: 'HK 금융 파트너스 로고'
   }
 ]
 
