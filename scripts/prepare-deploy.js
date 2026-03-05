@@ -72,6 +72,17 @@ function prepareDeploy() {
     fs.writeFileSync(distNojekyll, '', 'utf8')
   }
 
+  // CNAME 파일 확인 및 복사 (커스텀 도메인 유지용)
+  const publicCNAME = path.join(__dirname, '../public/CNAME')
+  const distCNAME = path.join(distDir, 'CNAME')
+  
+  if (fs.existsSync(publicCNAME)) {
+    fs.copyFileSync(publicCNAME, distCNAME)
+    console.log('✅ CNAME 파일 복사 완료 (커스텀 도메인 설정 유지)')
+  } else {
+    console.log('⚠️  CNAME 파일이 없습니다. 커스텀 도메인 설정이 사라질 수 있습니다.')
+  }
+
   // dist/public 폴더 삭제
   fs.rmSync(publicDir, { recursive: true, force: true })
 

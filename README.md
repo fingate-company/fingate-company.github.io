@@ -502,10 +502,17 @@ NUXT_PUBLIC_EMAILJS_TO_EMAIL=your_email@domain.com
    - 사이트 주소: `https://fingate.kr/office_homepage/`
    - 배포 후 몇 분 정도 소요될 수 있습니다.
 
-4. **주의사항**
+4. **커스텀 도메인 설정**
+   - `public/CNAME` 파일에 도메인을 설정하면 배포 시 자동으로 포함됩니다.
+   - 현재 설정: `fingate.kr`
+   - 다른 도메인을 사용하려면 `public/CNAME` 파일을 수정하세요.
+   - 배포 스크립트가 자동으로 `CNAME` 파일을 포함하므로 도메인 설정이 유지됩니다.
+
+5. **주의사항**
    - `gh-pages` 브랜치에는 `dist` 폴더의 내용만 포함됩니다.
    - `main` 브랜치에서 개발을 계속 진행할 수 있습니다.
    - 배포 전에 반드시 `npm run generate`로 빌드를 완료하세요.
+   - 커스텀 도메인 설정이 사라지지 않도록 `public/CNAME` 파일이 있는지 확인하세요.
 
 ### Vercel 배포
 
