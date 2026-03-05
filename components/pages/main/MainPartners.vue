@@ -52,15 +52,15 @@ const partnerLogos = [
     alt: 'AIA 생명보험 로고'
   },
   {
+    id: 'hk',
+    src: '/images/logos/hk-logo.png',
+    alt: 'HK 금융 파트너스 로고'
+  },
+  {
     id: 'best',
     src: '/images/logos/best-logo.png',
     alt: 'BEST 생명보험 로고'
   },
-  {
-    id: 'hk',
-    src: '/images/logos/hk-logo.png',
-    alt: 'HK 금융 파트너스 로고'
-  }
 ]
 
 // 파트너 로고 애니메이션 설정
