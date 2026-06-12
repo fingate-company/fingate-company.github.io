@@ -32,12 +32,14 @@ export const SITE_CONFIG = {
     reserved: 'FINGATE @ 2023. All rights reserved.'
   },
   
-  // EmailJS 설정 (배포용 임시 설정)
+  // EmailJS 설정 (값은 환경변수에서 주입: GitHub Actions Secrets / 로컬 .env)
+  // ⚠️ 키를 코드에 하드코딩하지 말 것 — 빌드 결과 JS에 그대로 노출됨.
+  //    도용 방지는 EmailJS 대시보드의 Allowed Origins(https://fingate.kr) 설정으로 처리.
   emailjs: {
-    serviceId: process.env.NUXT_PUBLIC_EMAILJS_SERVICE_ID || 'service_x6o8pif',
-    templateId: process.env.NUXT_PUBLIC_EMAILJS_TEMPLATE_ID || 'template_j1k8hbf',
-    publicKey: process.env.NUXT_PUBLIC_EMAILJS_PUBLIC_KEY || 'bGrFCLe7sUtZOAHqu',
-    toEmail: process.env.NUXT_PUBLIC_EMAILJS_TO_EMAIL || 'withus@fingate.kr'
+    serviceId: process.env.NUXT_PUBLIC_EMAILJS_SERVICE_ID || '',
+    templateId: process.env.NUXT_PUBLIC_EMAILJS_TEMPLATE_ID || '',
+    publicKey: process.env.NUXT_PUBLIC_EMAILJS_PUBLIC_KEY || '',
+    toEmail: process.env.NUXT_PUBLIC_EMAILJS_TO_EMAIL || ''
   },
   
   // SEO 기본값
