@@ -1,5 +1,7 @@
 import { SITE_CONFIG } from './config/site'
 
+const appBaseURL = process.env.NUXT_APP_BASE_URL || '/'
+
 export default defineNuxtConfig({
   devtools: { enabled: true },
   css: [
@@ -8,7 +10,7 @@ export default defineNuxtConfig({
   modules: ['@pinia/nuxt', '@vueuse/nuxt', '@nuxt/image'],
   
   app: {
-    baseURL: '/',
+    baseURL: appBaseURL,
     head: {
       htmlAttrs: {
         lang: 'ko'
@@ -17,15 +19,15 @@ export default defineNuxtConfig({
       titleTemplate: `%s | ${SITE_CONFIG.name}`,
       meta: [
         { charset: 'utf-8' },
-        { name: 'viewport', content: 'width=1920, user-scalable=no' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1, viewport-fit=cover' },
         { name: 'robots', content: SITE_CONFIG.seo.robots },
         { name: 'theme-color', content: SITE_CONFIG.themeColor },
         { name: 'format-detection', content: 'telephone=no' }
       ],
       link: [
-        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
-        { rel: 'shortcut icon', href: '/favicon.svg' },
-        { rel: 'apple-touch-icon', href: '/favicon.svg' },
+        { rel: 'icon', type: 'image/svg+xml', href: `${appBaseURL}favicon.svg` },
+        { rel: 'shortcut icon', href: `${appBaseURL}favicon.svg` },
+        { rel: 'apple-touch-icon', href: `${appBaseURL}favicon.svg` },
         { rel: 'preconnect', href: 'https://cdn.jsdelivr.net' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
@@ -69,13 +71,13 @@ export default defineNuxtConfig({
   nitro: {
     preset: 'github_pages',
     compatibilityDate: '2025-10-13',
-    baseURL: '/',
+    baseURL: appBaseURL,
     compressPublicAssets: {
       gzip: true,
       brotli: true
     },
     prerender: { 
-      routes: ['/', '/company', '/services/service1', '/services/service2', '/newvision', '/contact'],
+      routes: ['/', '/company', '/services/service1', '/services/service2', '/services/ax', '/newvision', '/contact'],
       failOnError: false
     },
     output: { dir: 'dist' }

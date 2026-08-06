@@ -26,6 +26,10 @@ export const MAIN_NAVIGATION: NavigationItem[] = [
       {
         name: '원스톱 상담지원 솔루션',
         path: '/services/service2'
+      },
+      {
+        name: 'AX 개발·전환',
+        path: '/services/ax'
       }
     ]
   },

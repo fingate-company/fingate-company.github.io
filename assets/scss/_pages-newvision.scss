@@ -15,13 +15,13 @@
   .content-section {
     position: relative;
     background: url('/images/newvision/newvision-bg.png') center top / cover no-repeat;
-    aspect-ratio: 1920 / 5950; /* 비율 유지 */
+    aspect-ratio: 1920 / 6650; /* AX 연결 섹션을 포함한 비율 유지 */
     transition: all 0.3s ease;
     content-visibility: auto;
     contain-intrinsic-size: auto 5000px;
     
     @media (min-width: 2560px) {
-      aspect-ratio: 1920 / 5000;
+      aspect-ratio: 1920 / 5750;
     }
     
     .section-subtitle {
@@ -88,7 +88,7 @@
     justify-content: center;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: $color-text-white;
-    font-size: 1.2rem;
+    font-size: $font-size-min;
   }
   
   .hero-content {
@@ -337,6 +337,116 @@
           right: 7rem;
         }
       }
+    }
+  }
+}
+
+// --- AX 개발·전환 연결 섹션 ---
+.newvision-ax {
+  position: relative;
+
+  .container {
+    margin-top: 24rem;
+  }
+
+  &__card {
+    position: relative;
+    min-height: 56rem;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 3.2rem;
+    background: #071119;
+    box-shadow: 0 3rem 8rem rgba(0, 0, 0, 0.24);
+  }
+
+  &__image,
+  &__shade {
+    position: absolute;
+    inset: 0;
+  }
+
+  &__image {
+    left: 32%;
+    background: url('/images/ax/ax-hero.png') center / cover no-repeat;
+    opacity: 0.82;
+  }
+
+  &__shade {
+    background:
+      linear-gradient(90deg, #071119 0%, rgba(7, 17, 25, 0.97) 38%, rgba(7, 17, 25, 0.58) 70%, rgba(7, 17, 25, 0.2) 100%),
+      linear-gradient(0deg, rgba(7, 17, 25, 0.7), transparent 55%);
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 62%;
+    padding: 7.2rem;
+    color: $color-text-white;
+
+    h2 {
+      margin-top: 2.4rem;
+      font-size: 4.4rem;
+      font-weight: $font-weight-semibold;
+      line-height: 1.35;
+      letter-spacing: -0.045em;
+    }
+
+    > p:not(.newvision-ax__eyebrow) {
+      margin-top: 2.4rem;
+      color: rgba(255, 255, 255, 0.64);
+      font-size: 1.8rem;
+      line-height: 1.75;
+    }
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-top: 3.2rem;
+    }
+
+    li {
+      padding: 0.8rem 1.4rem;
+      border: 1px solid rgba(127, 220, 231, 0.22);
+      border-radius: 999px;
+      background: rgba(18, 162, 184, 0.1);
+      color: #a8e7ed;
+      font-size: $font-size-min;
+    }
+  }
+
+  &__eyebrow {
+    color: #7fdce7;
+    font-family: $font-family-secondary;
+    font-size: $font-size-min;
+    font-weight: $font-weight-semibold;
+    letter-spacing: 0.14em;
+  }
+
+  &__button {
+    min-width: 17rem;
+    height: 5.6rem;
+    margin: 4rem 0 0;
+    border-color: $color-bg-primary;
+    background: $color-bg-primary;
+    font-size: 1.6rem;
+  }
+
+  @media (min-width: 2560px) {
+    .container { margin-top: 30rem; }
+
+    &__card { min-height: 70rem; border-radius: 4rem; }
+
+    &__content {
+      padding: 9rem;
+
+      h2 { font-size: 5.5rem; }
+      > p:not(.newvision-ax__eyebrow) { font-size: 2.2rem; }
+      li { font-size: 1.6rem; }
     }
   }
 }

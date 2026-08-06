@@ -3,8 +3,7 @@
     <div class="container">
       <div class="section-header" ref="headerRef">
         <h2 class="section-title text-black text-center">
-          고객의 비즈니스 고민을<br/>
-          핀게이트가 함께 해결하겠습니다.
+          고객의 비즈니스 고민을 핀게이트가 함께 해결하겠습니다.
         </h2>
       </div>
       <div class="d-flex gap-24 mt-120" ref="infoRef">

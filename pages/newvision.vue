@@ -14,6 +14,9 @@
       <!-- 넥스트스텝 섹션 -->
       <NewvisionNextstep />
 
+      <!-- AX 개발·전환 연결 섹션 -->
+      <NewvisionAx />
+
       <!-- 가치 섹션 -->
       <NewvisionValue />
 
@@ -28,6 +31,7 @@
 import NewvisionHero from '~/components/pages/newvision/NewvisionHero.vue'
 import NewvisionAgenda from '~/components/pages/newvision/NewvisionAgenda.vue'
 import NewvisionNextstep from '~/components/pages/newvision/NewvisionNextstep.vue'
+import NewvisionAx from '~/components/pages/newvision/NewvisionAx.vue'
 import NewvisionValue from '~/components/pages/newvision/NewvisionValue.vue'
 import NewvisionContact from '~/components/pages/newvision/NewvisionContact.vue'
 

@@ -57,3 +57,7 @@ jspm_packages/
 # Generated files
 public/sitemap.xml
 public/robots.txt
+tmp/
+
+# reference data
+_reference/

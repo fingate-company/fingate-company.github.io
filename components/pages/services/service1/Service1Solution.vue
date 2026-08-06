@@ -74,7 +74,7 @@ const features: FeatureItem[] = [
   {
     title: '데이터 기반의 지능형 서비스',
     description: [
-      'CDP(Customer Data Platform) 와 빅데이터 분석으로 고객 행동과<br/> 패턴을 파악합니다.',
+      'CDP(Customer Data Platform)와 빅데이터 분석으로 고객 행동과 패턴을 파악합니다.',
       '딥러닝 추천 알고리즘으로 개인화된 상품을 제안합니다.'
     ],
     image: 'service1-card2.png'
@@ -90,7 +90,7 @@ const features: FeatureItem[] = [
   {
     title: '스마트 RPA 자동화',
     description: [
-      'AI 기반 RPA 기술을 통해 반복적인 문서 업무를 자동화해 보험 업무<br>생산성을 높입니다.',
+      'AI 기반 RPA 기술을 통해 반복적인 문서 업무를 자동화해 보험 업무 생산성을 높입니다.',
       '이미지 패턴 인식 기반의 문서 자동화를 통해 정확한 데이터 구조화를 지원합니다.'
     ],
     image: 'service1-card4.png'

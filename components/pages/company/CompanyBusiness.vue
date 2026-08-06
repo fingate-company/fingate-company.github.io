@@ -49,7 +49,7 @@
                     height="48"
                   />
                 </div>
-                <h4 class="card-title" v-html="card.title"></h4>
+                <h4 class="card-title">{{ card.title }}</h4>
               </div>
             </div>
           </div>
@@ -113,23 +113,23 @@ const businessContents = [
     cards: [
       {
         icon: '/images/company/company-icon5.svg',
-        title: '보험금융 시스템<br>개발 및 통합',
+        title: '보험금융 시스템 개발 및 통합',
       },
       {
         icon: '/images/company/company-icon6.svg',
-        title: '정보자원 통합<br>관리 및 운영',
+        title: '정보자원 통합 관리 및 운영',
       },
       {
         icon: '/images/company/company-icon7.svg',
-        title: '시스템 위탁운영 및<br>유지보수',
+        title: '시스템 위탁운영 및 유지보수',
       },
       {
         icon: '/images/company/company-icon8.svg',
-        title: '모바일 / 하이브리드<br>앱 플랫폼',
+        title: '모바일·하이브리드 앱 플랫폼',
       },
       {
         icon: '/images/company/company-icon9.svg',
-        title: '온라인<br>플랫폼 개발',
+        title: '온라인 플랫폼 개발',
       },
       {
         icon: '/images/company/company-icon10.svg',
@@ -143,11 +143,11 @@ const businessContents = [
     cards: [
       {
         icon: '/images/company/company-icon11.svg',
-        title: 'GA 영업 및<br>정산관리',
+        title: 'GA 영업 및 정산 관리',
       },
       {
         icon: '/images/company/company-icon12.svg',
-        title: 'GA 경영 및<br>리스트 관리',
+        title: 'GA 경영 및 리스트 관리',
       },
       {
         icon: '/images/company/company-icon13.svg',
@@ -173,19 +173,19 @@ const businessContents = [
     cards: [
       {
         icon: '/images/company/company-icon17.svg',
-        title: '자사 솔루션<br>SaaS 유통',
+        title: '자사 솔루션 SaaS 유통',
       },
       {
         icon: '/images/company/company-icon18.svg',
-        title: '자사 솔루션<br>ASP 구축',
+        title: '자사 솔루션 ASP 구축',
       },
       {
         icon: '/images/company/company-icon19.svg',
-        title: '기업 및 보안<br>솔루션 유통',
+        title: '기업 및 보안 솔루션 유통',
       },
       {
         icon: '/images/company/company-icon20.svg',
-        title: '설계사 플랫폼<br>서비스 공급',
+        title: '설계사 플랫폼 서비스 공급',
       }
     ]
   },
@@ -203,7 +203,7 @@ const businessContents = [
       },
       {
         icon: '/images/company/company-icon23.svg',
-        title: '시스템 도입 지원<br>인프라도입 컨설팅',
+        title: '시스템 도입 지원·인프라 도입 컨설팅',
       },
       {
         icon: '/images/company/company-icon24.svg',

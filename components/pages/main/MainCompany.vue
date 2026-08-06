@@ -64,7 +64,7 @@ const companyCards = [
     link: '/company'
   },
   {
-    title: '보험 인하우스 <br/>IT 전문가',
+    title: '보험 인하우스 IT 전문가',
     image: '/images/main/main-card3.png',
     link: '/company'
   },

@@ -59,23 +59,23 @@ let gsapContext: gsap.Context | null = null
 const problems: ProblemItem[] = [
   {
     icon: 'service1_icon1',
-    text: '"설계사들이 많아지니<br/> 관리가 힘들어요."'
+    text: '"설계사들이 많아지니 관리가 힘들어요."'
   },
   {
     icon: 'service1_icon2',
-    text: '"보험사마다 다른 수수료 정<br/>산, 매번 힘듭니다."'
+    text: '"보험사마다 다른 수수료 정산, 매번 힘듭니다."'
   },
   {
     icon: 'service1_icon3',
-    text: '"계약·상담 내역을<br/> 통합해 보기 어려워요."'
+    text: '"계약·상담 내역을 통합해 보기 어려워요."'
   },
   {
     icon: 'service1_icon4',
-    text: '"수작업이 많아 업무 실수와<br/> 지연이 반복됩니다."'
+    text: '"수작업이 많아 업무 실수와 지연이 반복됩니다."'
   },
   {
     icon: 'service1_icon5',
-    text: '"업무 시스템이 제각각이라<br/> 너무 비효율적이에요."'
+    text: '"업무 시스템이 제각각이라 너무 비효율적이에요."'
   }
 ]
 

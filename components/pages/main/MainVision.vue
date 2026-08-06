@@ -16,7 +16,7 @@
           :aria-label="`${card.title} 페이지로 이동`"
         >
           <h3 class="vision-card-title">{{ card.title }}</h3>
-          <p class="vision-card-desc mt-24" v-html="card.desc"></p>
+          <p class="vision-card-desc mt-24">{{ card.desc }}</p>
         </NuxtLink>
       </div>
     </div>
@@ -34,17 +34,17 @@ if (process.client) {
 const visionCards = [
   {
     title: '맞춤형 AI 보장 컨설팅',
-    desc: '고객의 라이프스타일과 건강 데이터를 AI로<br>분석하여 최적의 보장 조합을 제안합니다.',
+    desc: '고객의 라이프스타일과 건강 데이터를 AI로 분석하여 최적의 보장 조합을 제안합니다.',
     link: '/newvision'
   },
   {
     title: 'AI 어드바이저',
-    desc: '설계사의 업무를 데이터 기반으로 지원하여<br>상담의 정확성과 신뢰성을 강화합니다.',
+    desc: '설계사의 업무를 데이터 기반으로 지원하여 상담의 정확성과 신뢰성을 강화합니다.',
     link: '/newvision'
   },
   {
     title: 'AI RPA',
-    desc: '이미지 패턴 인식 기술로 반복적인 문서 업무를<br>자동화하여 더 가치있는 업무에 집중합니다.',
+    desc: '이미지 패턴 인식 기술로 반복적인 문서 업무를 자동화하여 더 가치 있는 업무에 집중합니다.',
     link: '/newvision'
   }
 ]

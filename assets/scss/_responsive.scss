@@ -1,0 +1,1197 @@
+/* ========================================
+   FinGate responsive layout
+   ======================================== */
+
+@use 'variables' as *;
+
+.agenda-mobile-list {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .hero-header,
+  .section-header {
+    width: auto;
+
+    .hero-title,
+    .section-title {
+      font-size: clamp(3.6rem, 5vw, 5.2rem);
+      line-height: 1.28;
+    }
+
+    .hero-subtitle,
+    .section-subtitle {
+      font-size: clamp(1.5rem, 2vw, 2rem);
+      line-height: 1.4;
+      letter-spacing: 0.4rem;
+    }
+
+    .hero-desc,
+    .section-desc {
+      font-size: clamp(1.7rem, 2vw, 2.2rem);
+      line-height: 1.65;
+    }
+  }
+
+  .main-company .company-cards .company-card.company-card-4 {
+    transform: translate(-520px, -200px);
+  }
+
+  .main-services {
+    .services-cards {
+      left: 44%;
+    }
+  }
+
+  .company-business .business-container {
+    padding-inline: 4rem;
+  }
+
+  .service2-report .report-content-wrapper {
+    width: calc(100% - 8rem);
+  }
+}
+
+@media (max-width: 900px) {
+  .app,
+  .main,
+  .company,
+  .newvision,
+  .service1-service,
+  .service2-service,
+  .contact {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .hero-header,
+  .section-header {
+    max-width: 72rem;
+
+    .hero-title,
+    .section-title {
+      font-size: clamp(3.2rem, 8vw, 4.8rem);
+      line-height: 1.25;
+      letter-spacing: -0.04em;
+    }
+
+    .hero-subtitle,
+    .section-subtitle {
+      font-size: 1.5rem;
+      line-height: 1.4;
+      letter-spacing: 0.22rem !important;
+    }
+
+    .hero-desc,
+    .section-desc {
+      font-size: 1.7rem;
+      line-height: 1.65;
+    }
+  }
+
+  .mt-120 { margin-top: 6.4rem !important; }
+  .mt-80 { margin-top: 4.8rem !important; }
+  .mt-78 { margin-top: 4rem !important; }
+  .mt-64 { margin-top: 4rem !important; }
+  .mt-60 { margin-top: 4rem !important; }
+  .mt-48 { margin-top: 3.2rem !important; }
+  .mt-40 { margin-top: 2.8rem !important; }
+  .mt-32 { margin-top: 2.4rem !important; }
+  .mt-24 { margin-top: 1.6rem !important; }
+  .mt-20 { margin-top: 1.4rem !important; }
+
+  /* Main */
+  .main .content-section,
+  .newvision .content-section,
+  .company {
+    aspect-ratio: auto;
+    display: block;
+    background-size: auto 100%;
+  }
+
+  .main-hero,
+  .newvision-hero {
+    min-height: 64rem;
+    height: 100svh;
+    max-height: none;
+
+    .hero-content {
+      margin-top: 0;
+
+      .hero-title {
+        font-size: clamp(4.2rem, 10vw, 7.2rem);
+        line-height: 1.16;
+      }
+
+      .hero-subtitle {
+        max-width: 56rem;
+        font-size: clamp(2rem, 4vw, 2.8rem);
+        line-height: 1.45;
+      }
+    }
+  }
+
+  .main-company {
+    .container {
+      height: auto;
+      min-height: 0;
+      padding-block: 12rem;
+      align-items: stretch;
+    }
+
+    .hero-header {
+      margin-inline: auto;
+    }
+
+    .company-cards {
+      display: grid;
+      width: 100%;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.6rem;
+      margin-top: 7.2rem;
+
+      .company-card,
+      .company-card.company-card-1,
+      .company-card.company-card-2,
+      .company-card.company-card-3,
+      .company-card.company-card-4,
+      .company-card.company-card-5 {
+        position: relative;
+        inset: auto;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 5;
+        transform: none !important;
+        opacity: 1 !important;
+        cursor: pointer;
+      }
+
+      .company-card.company-card-1 {
+        grid-row: span 2;
+      }
+
+      .company-card.company-card-5 {
+        aspect-ratio: 2 / 1;
+        grid-column: 1 / -1;
+      }
+    }
+
+    .custom-cursor {
+      display: none;
+    }
+  }
+
+  .main-services {
+    display: block;
+
+    .container {
+      min-height: 0;
+      margin-top: 0;
+      padding-block: 12rem;
+    }
+
+    .services-header {
+      position: static;
+      width: auto;
+    }
+
+    .services-cards {
+      position: static;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.6rem;
+      margin-top: 7.2rem;
+
+      .service-card,
+      .service-card.service-card-1,
+      .service-card.service-card-2,
+      .service-card.service-card-3,
+      .service-card.service-card-4,
+      .service-card.service-card-5 {
+        position: relative;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 3 / 4;
+        transform: none !important;
+        opacity: 1 !important;
+      }
+
+      .service-card-5 {
+        grid-column: 1 / -1;
+        aspect-ratio: 16 / 8;
+      }
+
+      .service-card .card-text {
+        bottom: 0;
+        padding: 3rem;
+        background: linear-gradient(transparent, rgba(4, 10, 18, 0.88));
+
+        .card-title {
+          font-size: 2.4rem;
+        }
+
+        .card-desc {
+          font-size: 1.6rem;
+          line-height: 1.65;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .main-partners .container,
+  .main-vision .container {
+    margin: 0;
+    padding-block: 12rem;
+  }
+
+  .main-partners {
+    .logo-wrapper {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.6rem;
+      margin-top: 6.4rem;
+    }
+
+    .partner-logo {
+      width: 100%;
+      height: auto;
+      min-height: 8rem;
+      opacity: 1;
+    }
+  }
+
+  .main-vision .container {
+    .vision-cards-wrapper {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.6rem;
+      margin-top: 6.4rem;
+    }
+
+    .vision-card {
+      width: 100%;
+      height: auto;
+      min-height: 36rem;
+      padding: 4rem;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  }
+
+  .main-banner {
+    padding-block: 10rem;
+
+    .container {
+      margin: 0;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4rem;
+    }
+  }
+
+  /* Company */
+  .company-hero {
+    height: auto;
+    min-height: 60rem;
+    max-height: none;
+  }
+
+  .company-growth {
+    .container {
+      padding-block: 11rem;
+    }
+
+    .growth-content {
+      margin-top: 7.2rem;
+    }
+
+    .growth-content .value-cards {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 4.8rem 2rem;
+
+      .value-card {
+        padding-inline: 1.6rem;
+
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .company-strength {
+    .container {
+      padding-top: 11rem;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4rem;
+
+      .section-header {
+        width: auto;
+      }
+    }
+
+    .carousel {
+      margin-block: 6.4rem 10rem;
+    }
+
+    .carousel-slide {
+      width: min(86vw, 72rem);
+    }
+
+    .slide-content {
+      padding: 4rem;
+    }
+  }
+
+  .company-business {
+    .container {
+      padding-top: 11rem;
+    }
+
+    .container .business-buttons {
+      margin-top: 4.8rem;
+    }
+
+    .container .business-content {
+      margin-top: 6.4rem;
+
+      .content-wrapper {
+        min-height: 0;
+      }
+
+      .content-overlay {
+        padding: 5.6rem 3.2rem;
+        flex-direction: column;
+        gap: 4rem;
+
+        .content-cards,
+        .content-cards:has(.business-card:nth-child(4):last-child),
+        .content-cards:has(.business-card:nth-child(5):last-child),
+        .content-cards:has(.business-card:nth-child(6):last-child) {
+          width: 100%;
+          max-width: none;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+
+          .business-card:nth-child(4),
+          .business-card:nth-child(5) {
+            grid-column: auto;
+          }
+        }
+
+        .content-cards .business-card {
+          padding: 3.2rem 2rem;
+
+          .card-title {
+            height: auto;
+            min-height: 5.6rem;
+          }
+        }
+      }
+    }
+
+    .business-container {
+      margin-block: 9rem;
+      padding-inline: 2rem;
+
+      .business-image {
+        min-height: 42rem;
+        overflow: hidden;
+        border-radius: 2.4rem;
+
+        > img {
+          position: absolute;
+          inset: 0;
+        }
+      }
+
+      .business-visual {
+        padding: 4rem;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 4rem;
+        column-gap: 0;
+
+        .business-title {
+          font-size: 3rem;
+          line-height: 1.35;
+        }
+
+        .business-description {
+          font-size: 1.7rem;
+          line-height: 1.65;
+        }
+      }
+    }
+  }
+
+  .company-history {
+    .container {
+      padding-block: 11rem;
+      flex-direction: column;
+      gap: 7.2rem;
+
+      .section-header {
+        position: static;
+        min-width: 0;
+      }
+
+      .timeline-shell {
+        width: 100%;
+        max-width: none;
+        min-height: 0;
+
+        .year-block {
+          margin-bottom: 7.2rem;
+          opacity: 1;
+        }
+
+        .year-label {
+          font-size: 5.6rem;
+          line-height: 1.2;
+        }
+
+        .event-item {
+          grid-template-columns: 3.2rem minmax(0, 1fr);
+
+          .event-text {
+            margin-left: 2rem;
+          }
+        }
+      }
+    }
+  }
+
+  .next-step {
+    height: auto;
+    min-height: 48rem;
+    padding-block: 10rem;
+  }
+
+  .company-contact .container {
+    padding-block: 10rem;
+    flex-direction: column;
+    gap: 6.4rem;
+
+    .contact-info,
+    .contact-map {
+      width: 100%;
+    }
+
+    .contact-list .contact-item-wrapper {
+      gap: 4rem;
+      flex-wrap: wrap;
+    }
+
+    .contact-map img {
+      width: 100%;
+      border-radius: 2.4rem;
+    }
+  }
+
+  /* New Vision */
+  .newvision-agenda {
+    .agenda-cards-container {
+      padding-top: 11rem;
+    }
+
+    .agenda-unified-area {
+      display: none;
+    }
+
+    .agenda-mobile-list {
+      display: grid;
+      gap: 2rem;
+      margin-top: 6.4rem;
+    }
+
+    .agenda-mobile-card {
+      padding: 2rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 2.4rem;
+      background: rgba(30, 46, 65, 0.44);
+      color: $color-text-white;
+
+      &__images {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+
+        img {
+          width: 100%;
+          aspect-ratio: 1 / 1;
+          border-radius: 1.6rem;
+          object-fit: cover;
+        }
+      }
+
+      h3 {
+        margin-top: 2.8rem;
+        font-size: 2.4rem;
+        font-weight: $font-weight-semibold;
+      }
+
+      p {
+        margin-top: 1.6rem;
+        color: rgba(255, 255, 255, 0.72);
+        font-size: 1.6rem;
+        line-height: 1.7;
+      }
+    }
+  }
+
+  .newvision-nextstep {
+    .container {
+      margin-top: 11rem;
+    }
+
+    .point-cards {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+
+      .point-card {
+        height: auto;
+        min-height: 34rem;
+        padding: 4rem 3.2rem;
+
+        .point-icon {
+          right: 3.2rem;
+          bottom: 3.2rem;
+        }
+      }
+    }
+  }
+
+  .newvision-ax {
+    .container {
+      margin-top: 11rem;
+    }
+
+    &__card {
+      min-height: 0;
+    }
+
+    &__image {
+      left: 0;
+      opacity: 0.46;
+    }
+
+    &__shade {
+      background: linear-gradient(90deg, rgba(7, 17, 25, 0.98), rgba(7, 17, 25, 0.74));
+    }
+
+    &__content {
+      width: 100%;
+      padding: 5.6rem 4rem;
+
+      h2 {
+        font-size: 3.6rem;
+      }
+    }
+  }
+
+  .newvision-value {
+    .container {
+      padding-top: 11rem;
+    }
+
+    .value-buttons {
+      flex-wrap: wrap;
+    }
+
+    .value-content .content-wrapper {
+      gap: 4.8rem;
+      flex-direction: column;
+
+      .content-image {
+        max-height: 56rem;
+        overflow: hidden;
+        border-radius: 2.4rem;
+      }
+
+      .content-text {
+        min-width: 0;
+        width: 100%;
+      }
+    }
+  }
+
+  .newvision-contact,
+  .service1-contact,
+  .service2-contact-banner {
+    .contact-container {
+      padding: 10rem 2rem 0;
+      margin-bottom: 8rem;
+    }
+
+    .contact-image {
+      min-height: 40rem;
+      overflow: hidden;
+      border-radius: 2.4rem;
+
+      > img {
+        position: absolute;
+        inset: 0;
+      }
+    }
+
+    .contact-visual {
+      padding: 4rem;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 4rem;
+      column-gap: 0;
+
+      .contact-title {
+        font-size: 3rem;
+        line-height: 1.4;
+      }
+    }
+  }
+
+  /* Service 1 */
+  .service1-hero,
+  .service2-hero {
+    height: auto;
+    min-height: 60rem;
+
+    .container {
+      margin-top: 0;
+    }
+  }
+
+  .service1-reason .container,
+  .service1-solution .container,
+  .service1-total .container,
+  .service2-onestop .container,
+  .service2-manage .container,
+  .service2-diagnosis .container,
+  .service2-report .container {
+    padding-top: 11rem;
+  }
+
+  .service1-reason {
+    .carousel-viewport::before,
+    .carousel-viewport::after {
+      width: 4rem;
+    }
+
+    .carousel-slide {
+      height: 24rem;
+
+      .problem-card {
+        padding: 3.2rem;
+      }
+    }
+  }
+
+  .service1-solution {
+    .solution-features {
+      gap: 7.2rem;
+    }
+
+    .feature-content {
+      flex-direction: column;
+      gap: 3.2rem;
+
+      .feature-image,
+      .feature-image img {
+        width: 100%;
+      }
+    }
+  }
+
+  .service1-revolution {
+    .container {
+      max-width: none;
+      padding-block: 11rem;
+    }
+
+    .feature-grid {
+      margin-top: 6.4rem;
+    }
+  }
+
+  .service1-custom {
+    .container {
+      padding-block: 11rem;
+    }
+
+    .custom-points {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .point-card {
+      height: auto;
+      min-height: 38rem;
+      padding: 4rem;
+
+      .point-icon {
+        right: 4rem;
+        bottom: 4rem;
+      }
+    }
+  }
+
+  .service1-contact {
+    .container {
+      padding-top: 11rem;
+    }
+
+    .contact-container {
+      padding-top: 8rem;
+    }
+  }
+
+  /* Service 2 */
+  .service2-recommend .container {
+    padding-block: 11rem;
+
+    .bubble-content {
+      width: 100%;
+      padding: 2rem 3.2rem;
+      border-radius: 2.4rem;
+    }
+  }
+
+  .service2-onestop .dashboard-cards {
+    display: grid;
+    height: auto;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.2rem;
+    margin-top: 6.4rem;
+    overflow: visible;
+
+    &::after {
+      display: none;
+    }
+
+    .card,
+    .card.card-1,
+    .card.card-2,
+    .card.card-3,
+    .card.card-4,
+    .card.card-5,
+    .card.card-6,
+    .card.card-7,
+    .card.card-8,
+    .card.card-9,
+    .card.card-10,
+    .card.card-11 {
+      position: relative;
+      inset: auto;
+      display: flex;
+      align-items: center;
+      min-height: 12rem;
+      padding: 1.6rem;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 1.6rem;
+      background: rgba(255, 255, 255, 0.04);
+      transform: none !important;
+      opacity: 1 !important;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .service2-manage {
+    .manage-content {
+      padding-top: 6.4rem;
+      flex-direction: column;
+      gap: 7.2rem;
+    }
+
+    .area-details-image-overlay {
+      display: none;
+    }
+  }
+
+  .service2-diagnosis {
+    .diagnosis-content {
+      padding-bottom: 10rem;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 4.8rem;
+    }
+
+    .diagnosis-buttons {
+      min-width: 0;
+      flex: none;
+
+      .diagnosis-button,
+      .diagnosis-button.active {
+        height: auto;
+        min-height: 12rem;
+        padding-block: 2.4rem;
+      }
+    }
+
+    .diagnosis-card {
+      min-height: 0;
+      aspect-ratio: 569 / 680;
+
+      img {
+        width: 100%;
+        max-width: 56.9rem;
+        max-height: 100%;
+      }
+    }
+  }
+
+  .service2-report {
+    .report-buttons {
+      flex-wrap: wrap;
+    }
+
+    .report-content-wrapper {
+      width: 100%;
+
+      .report-content-section {
+        flex-direction: column;
+        overflow: hidden;
+      }
+
+      .report-content-info {
+        padding: 5.6rem 3.2rem;
+      }
+
+      .report-dashboard-image {
+        position: static;
+        width: 100%;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  /* Contact */
+  .contact-hero {
+    height: auto;
+    min-height: 60rem;
+    padding: 24rem 0 12rem;
+  }
+
+  .contact-info {
+    padding-block: 10rem;
+
+    > .container > .d-flex {
+      flex-direction: column;
+    }
+
+    .info-item {
+      height: auto;
+      min-height: 48rem;
+      padding: 5.6rem 4rem;
+    }
+  }
+
+  .contact-form {
+    padding-block: 10rem;
+
+    .form-wrap {
+      flex-direction: column;
+      gap: 6.4rem;
+
+      .form-item:first-child {
+        min-width: 0;
+        width: 100%;
+      }
+    }
+  }
+
+  /* AX */
+  .ax-page {
+    .ax-section__header h2,
+    .ax-contact__content h2 {
+      text-wrap: balance;
+    }
+
+    p,
+    li,
+    h1,
+    h2,
+    h3,
+    strong,
+    span {
+      word-break: keep-all;
+    }
+
+    .ax-roadmap__steps {
+      grid-template-columns: 1fr;
+      gap: 2.4rem;
+
+      &::before {
+        display: block;
+        top: 0.8rem;
+        bottom: 0.8rem;
+        left: 0.8rem;
+        right: auto;
+        width: 1px;
+        height: auto;
+      }
+
+      li {
+        padding-left: 4rem;
+      }
+    }
+
+    .ax-roadmap__number {
+      line-height: 1.6rem;
+      text-align: left;
+    }
+
+    .ax-roadmap__dot {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 0;
+    }
+
+    .ax-roadmap__copy {
+      min-height: 0;
+      margin-top: 1.6rem;
+    }
+
+    .ax-system__flow {
+      grid-template-columns: 1fr;
+      gap: 0;
+      margin-top: 7.2rem;
+      padding-bottom: 0;
+      overflow: visible;
+    }
+
+    .ax-system__step {
+      display: grid;
+      grid-template-columns: 8rem minmax(0, 1fr);
+      grid-template-rows: auto auto auto;
+      column-gap: 2.4rem;
+      padding: 2.4rem 0;
+      text-align: left;
+
+      &::after {
+        top: calc(2.4rem + var(--ax-system-index-height) + var(--ax-system-node-gap) + var(--ax-system-node-radius));
+        bottom: calc(-2.4rem - var(--ax-system-index-height) - var(--ax-system-node-gap) - var(--ax-system-node-radius));
+        left: 4rem;
+        width: 1px;
+        height: auto;
+        background: rgba(127, 220, 231, 0.52);
+      }
+
+      &:last-child::after {
+        display: none;
+      }
+
+      .ax-system__index {
+        grid-column: 1;
+        grid-row: 1;
+        text-align: center;
+      }
+
+      .ax-system__node {
+        grid-column: 1;
+        grid-row: 2 / 4;
+        margin: 1.6rem auto 0;
+      }
+
+      h3 {
+        grid-column: 2;
+        grid-row: 2;
+        margin-top: 1.6rem;
+      }
+
+      p {
+        grid-column: 2;
+        grid-row: 3;
+      }
+    }
+
+    .ax-system__principle {
+      width: 100%;
+      margin-top: 7.2rem;
+      padding: 3.2rem;
+      gap: 2.4rem;
+
+      > span {
+        white-space: normal;
+      }
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-header,
+  .section-header {
+    .hero-title,
+    .section-title {
+      font-size: clamp(3rem, 9vw, 4rem);
+    }
+  }
+
+  .main-hero,
+  .newvision-hero {
+    .hero-content .hero-title {
+      font-size: clamp(3.8rem, 11vw, 5.6rem);
+    }
+  }
+
+  .scroll-down-container {
+    bottom: 3rem;
+  }
+
+  .main-company .company-cards,
+  .main-services .services-cards,
+  .main-partners .logo-wrapper,
+  .company-growth .growth-content .value-cards,
+  .newvision-nextstep .point-cards,
+  .service1-custom .custom-points,
+  .service2-onestop .dashboard-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .main-company .company-cards {
+    .company-card.company-card-1,
+    .company-card.company-card-5 {
+      grid-column: auto;
+      grid-row: auto;
+      aspect-ratio: 16 / 11;
+    }
+  }
+
+  .main-services .services-cards {
+    .service-card,
+    .service-card.service-card-5 {
+      grid-column: auto;
+      aspect-ratio: 4 / 4.6;
+    }
+  }
+
+  .main-vision .container .vision-card {
+    min-height: 32rem;
+    padding: 3.2rem;
+  }
+
+  .company-business {
+    .container .business-buttons {
+      display: grid;
+      width: 100%;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+
+      .button {
+        min-width: 0;
+        width: 100%;
+      }
+    }
+
+    .container .business-content .content-overlay {
+      padding: 4rem 2rem;
+
+      .content-cards,
+      .content-cards:has(.business-card:nth-child(4):last-child),
+      .content-cards:has(.business-card:nth-child(5):last-child),
+      .content-cards:has(.business-card:nth-child(6):last-child) {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  .company-contact .container .contact-list .contact-item-wrapper {
+    flex-direction: column;
+  }
+
+  .newvision-nextstep .point-cards .point-card,
+  .service1-custom .point-card {
+    min-height: 32rem;
+  }
+
+  .newvision-ax {
+    &__content {
+      padding: 4.8rem 2.4rem;
+
+      h2 {
+        font-size: 3rem;
+      }
+    }
+
+    &__button {
+      width: 100%;
+    }
+  }
+
+  .service1-revolution .feature-grid {
+    grid-template-columns: 1fr;
+
+    .feature-card,
+    .feature-card:nth-child(2n),
+    .feature-card:nth-child(n+3),
+    .feature-card:nth-child(n+4) {
+      margin-top: 0;
+    }
+  }
+
+  .service2-recommend .container .bubble-content {
+    align-items: flex-start;
+    padding: 2rem;
+
+    .bubble-icon img {
+      width: 5.6rem;
+      height: 5.6rem;
+    }
+  }
+
+  .service2-report .report-content-wrapper {
+    .report-content-info {
+      padding: 4rem 2rem;
+    }
+
+    .report-feature-card {
+      align-items: flex-start !important;
+      gap: 2rem !important;
+
+      .report-feature-icon {
+        width: 7.2rem !important;
+        height: 7.2rem !important;
+      }
+    }
+  }
+
+  .contact-info .info-item {
+    min-height: 42rem;
+    padding: 4rem 2.4rem;
+
+    .info-title {
+      font-size: 3rem;
+      line-height: 1.35;
+    }
+  }
+
+  .contact-form {
+    .form-item .d-flex {
+      flex-direction: column;
+    }
+
+    .radio-group {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+
+      .radio-button {
+        width: 100%;
+        padding-inline: 1.6rem;
+        text-align: center;
+      }
+    }
+
+    .form-label-subtext {
+      display: block;
+      margin: 0.8rem 0 0 !important;
+    }
+  }
+}

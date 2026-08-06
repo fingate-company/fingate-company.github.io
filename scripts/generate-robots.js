@@ -7,8 +7,17 @@ const path = require('path')
 
 function generateRobots() {
   const baseUrl = process.env.NUXT_PUBLIC_BASE_URL || 'https://fingate.kr/'
+  const robotsDirective = process.env.NUXT_PUBLIC_ROBOTS || 'index,follow'
+  const isPreview = robotsDirective.includes('noindex')
   
-  const robotsTxt = `# ========================================
+  const robotsTxt = isPreview ? `# ========================================
+# FinGate Preview Robots.txt
+# Generated: ${new Date().toISOString()}
+# ========================================
+
+User-agent: *
+Disallow: /
+` : `# ========================================
 # FinGate Robots.txt
 # Generated: ${new Date().toISOString()}
 # ========================================

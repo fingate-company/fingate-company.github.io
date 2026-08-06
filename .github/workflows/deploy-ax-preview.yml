@@ -1,0 +1,49 @@
+name: Deploy AX Preview
+
+on:
+  push:
+    branches: [feature/ax-homepage]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pages-deploy
+  cancel-in-progress: false
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout preview branch
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate preview site
+        run: npm run generate
+        env:
+          NUXT_APP_BASE_URL: /ax-preview/
+          NUXT_PUBLIC_BASE_URL: https://fingate.kr/ax-preview
+          NUXT_PUBLIC_ROBOTS: noindex,nofollow
+          NUXT_PUBLIC_EMAILJS_SERVICE_ID: ${{ secrets.NUXT_PUBLIC_EMAILJS_SERVICE_ID }}
+          NUXT_PUBLIC_EMAILJS_TEMPLATE_ID: ${{ secrets.NUXT_PUBLIC_EMAILJS_TEMPLATE_ID }}
+          NUXT_PUBLIC_EMAILJS_PUBLIC_KEY: ${{ secrets.NUXT_PUBLIC_EMAILJS_PUBLIC_KEY }}
+          NUXT_PUBLIC_EMAILJS_TO_EMAIL: ${{ secrets.NUXT_PUBLIC_EMAILJS_TO_EMAIL }}
+
+      - name: Deploy preview directory
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./dist/public
+          destination_dir: ax-preview
+          keep_files: true

@@ -7,10 +7,11 @@
 }
 
 @mixin container-responsive {
-  max-width: $container-max-width;
+  width: 100%;
+  max-width: calc(#{$container-max-width} + (2 * #{$container-padding}));
   margin: 0 auto;
   padding: 0 $container-padding;
-  @media (min-width: 2560px) { max-width: 1680px; }
+  @media (min-width: 2560px) { max-width: calc(1680px + (2 * #{$container-padding})); }
 }
 
 @mixin section-padding { padding: 6rem 0; }

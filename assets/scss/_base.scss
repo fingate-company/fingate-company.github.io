@@ -21,6 +21,9 @@
 // 2. HTML & Body 설정
 html {
   font-size: 10px; // 1rem = 10px로 설정
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -33,6 +36,9 @@ body {
   padding: 0;
   background-color: #ffffff;
   min-height: 100vh;
+  overflow-x: hidden;
+  word-break: keep-all;
+  overflow-wrap: normal;
   
   input, textarea, select, button {
     font-family: $font-family-primary;
@@ -46,12 +52,21 @@ h1, h2, h3, h4, h5, h6 {
   font-size: inherit;
   font-weight: inherit;
   line-height: inherit;
+  text-wrap: balance;
 }
 
 // 4. 텍스트 요소 초기화
-p, span, label {
+p, span, label, small {
   margin: 0;
   padding: 0;
+}
+
+small {
+  font-size: inherit;
+}
+
+p, li, dd, address {
+  text-wrap: pretty;
 }
 
 // 5. 리스트 초기화
@@ -135,14 +150,6 @@ address {
 // 컨테이너
 .container {
   @include container-responsive;
-  
-  @media (max-width: 1400px) {
-    padding: 0 1.5rem;
-  }
-  
-  @media (min-width: 2560px) {
-    max-width: 1680px;
-  }
 }
 
 // 버튼
@@ -288,7 +295,7 @@ address {
   }
   
   .scroll-down-text {
-    font-size: 1.2rem;
+    font-size: $font-size-min;
     font-weight: $font-weight-semibold;
     line-height: 2.4rem;
     color: $color-text-white;
@@ -314,7 +321,7 @@ address {
     }
     
     .scroll-down-text {
-      font-size: 1.4rem;
+      font-size: $font-size-min;
       line-height: 2.8rem;
     }
   }
@@ -334,4 +341,25 @@ address {
 .fade-up-leave-to {
   opacity: 0;
   transform: translateY(2rem);
+}
+
+@media (max-width: 900px) {
+  .button {
+    min-width: 18rem;
+    height: 5.6rem;
+    border-radius: 2.8rem;
+    font-size: 1.6rem;
+  }
+
+  .scroll-to-top {
+    right: 2rem;
+    bottom: 2rem;
+    width: 5.2rem;
+    height: 5.2rem;
+
+    svg {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+  }
 }

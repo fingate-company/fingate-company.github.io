@@ -63,22 +63,22 @@ const setCardRef = (el: Element | ComponentPublicInstance | null, index: number)
 const revolutionBlocks: RevolutionBlock[] = [
   {
     title: '설계사 업무 성과 극대화',
-    description: '고객 정보의 통합관리와 상담, 계약, 마케팅 기능의<br/> 유기적 연동을 통해 업무 효율성을 높입니다.',
+    description: '고객 정보의 통합 관리와 상담, 계약, 마케팅 기능의 유기적 연동을 통해 업무 효율성을 높입니다.',
     image: 'service1-card5.png'
   },
   {
     title: '효율적인 DB 관리 운영',
-    description: '다채널로 유입되는 DB를 통합 관리하여,<br/> 체계적이고 정밀한 DB운영을 지원합니다.',
+    description: '다채널로 유입되는 DB를 통합 관리하여 체계적이고 정밀한 DB 운영을 지원합니다.',
     image: 'service1-card6.png'
   },
   {
     title: '신속하고 정확한 정산',
-    description: '계약정보 기반으로 실시간 지급액을 산출하고,<br/> 2개월분 마감·지급·환수 수수료까지 집계해<br/>정확한 정산을 제공합니다.',
+    description: '계약 정보 기반으로 실시간 지급액을 산출하고, 2개월분 마감·지급·환수 수수료까지 집계해 정확한 정산을 제공합니다.',
     image: 'service1-card7.png'
   },
   {
     title: '강력한 보안',
-    description: '글로벌 대형 보험사의 보안 기준을 충족하며,<br/> 최신 기술로 최고 수준의 보안을 제공합니다.',
+    description: '글로벌 대형 보험사의 보안 기준을 충족하며 최신 기술로 최고 수준의 보안을 제공합니다.',
     image: 'service1-card8.png'
   }
 ]

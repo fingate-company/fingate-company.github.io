@@ -4,7 +4,7 @@
       <div class="section-header" ref="historyHeaderRef">
         <div class="section-subtitle">Trust First, Grow Always</div>
         <h2 id="history-heading" class="section-title mt-24">
-          신뢰를 우선으로 끊임없이<br>성장합니다.
+          신뢰를 우선으로 끊임없이 성장합니다.
         </h2>
       </div>
 

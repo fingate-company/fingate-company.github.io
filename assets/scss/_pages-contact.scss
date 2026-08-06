@@ -176,7 +176,7 @@
       right: 1.2rem;
       display: flex;
       align-items: center;
-      font-size: 1.2rem;
+      font-size: $font-size-min;
       color: $color-text-gray;
       padding: 0.4rem 0.8rem;
       border-radius: 0.4rem;
@@ -194,7 +194,7 @@
     }
     
     .error-message {
-      font-size: 1.4rem;
+      font-size: $font-size-min;
       color: #e74c3c;
       font-weight: $font-weight-medium;
       line-height: 1.6rem;

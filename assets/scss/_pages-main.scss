@@ -75,7 +75,7 @@
     justify-content: center;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: $color-text-white;
-    font-size: 1.2rem;
+    font-size: $font-size-min;
   }
   
   .hero-content {
@@ -333,11 +333,11 @@
     margin-top: 30rem;
     position: relative;
     width: 100%;
-    min-height: 170rem;
+    min-height: 196rem;
     transition: all 0.3s ease;
     
     @media (min-width: 2560px) {
-      min-height: 212.5rem;
+      min-height: 248rem;
     }
   }
   .services-header {
@@ -450,6 +450,13 @@
         
         @media (min-width: 2560px) {
           transform: translate(-134px, 1462px);
+        }
+      }
+      &.service-card-5 {
+        transform: translate(344px, 1310px);
+
+        @media (min-width: 2560px) {
+          transform: translate(430px, 1638px);
         }
       }
       &:hover {

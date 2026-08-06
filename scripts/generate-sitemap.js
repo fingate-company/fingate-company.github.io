@@ -36,6 +36,12 @@ function generateSitemap() {
       changefreq: 'monthly',
       lastmod: new Date().toISOString()
     },
+    {
+      url: '/services/ax',
+      priority: '0.8',
+      changefreq: 'monthly',
+      lastmod: new Date().toISOString()
+    },
     { 
       url: '/newvision', 
       priority: '0.7', 

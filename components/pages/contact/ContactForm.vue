@@ -4,8 +4,7 @@
       <div class="form-wrap" ref="formRef">
         <div class="form-item">
           <h2 class="form-title-text">
-            궁금하신 사항을 문의 주시면,<br/>
-            빠르게 답변 드리겠습니다.
+            궁금하신 사항을 문의 주시면 빠르게 답변드리겠습니다.
           </h2>
           <p class="form-title-subtext mt-40">
             <em class="form-dot mr-8" aria-hidden="true"/>

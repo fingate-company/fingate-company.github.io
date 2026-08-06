@@ -20,7 +20,7 @@
               :class="`card-text-${index + 1}`"
             >
               <h3 class="card-title">{{ card.title }}</h3>
-              <p class="card-desc mt-32" v-html="card.desc"></p>
+              <p class="card-desc mt-32">{{ card.desc }}</p>
             </div>
           </div>
 
@@ -53,6 +53,17 @@
             </div>
           </div>
         </div>
+
+        <div class="agenda-mobile-list" aria-label="보험 현장의 주요 과제">
+          <article v-for="card in agendaCards" :key="`mobile-${card.title}`" class="agenda-mobile-card">
+            <div class="agenda-mobile-card__images">
+              <img :src="card.imageLeft" :alt="`${card.title} 사례 이미지 1`" loading="lazy" />
+              <img :src="card.imageRight" :alt="`${card.title} 사례 이미지 2`" loading="lazy" />
+            </div>
+            <h3>{{ card.title }}</h3>
+            <p>{{ card.desc }}</p>
+          </article>
+        </div>
       </div>
     </div>
   </section>
@@ -78,19 +89,19 @@ const activeCardIndex = ref(0)
 const agendaCards = [
   {
     title: '복잡한 보장 분석',
-    desc: '보험사별로 흩어진 정보를 확인하기 위해 설계사는 여러 전산을<br/>오가야 하므로, 한 번에 비교 · 분석이 어렵습니다.',
+    desc: '보험사별로 흩어진 정보를 확인하기 위해 설계사는 여러 전산을 오가야 하므로, 한 번에 비교·분석하기 어렵습니다.',
     imageLeft: '/images/newvision/newvision-card1.png',
     imageRight: '/images/newvision/newvision-card4.png',
   },
   {
     title: '불안정한 신규 설계사 온보딩',
-    desc: '신규 설계사는 경험 부족으로 초기 실수가 잦아 안정적인<br/>고객 관리와 정착에 어려움을 겪습니다.',
+    desc: '신규 설계사는 경험 부족으로 초기 실수가 잦아 안정적인 고객 관리와 정착에 어려움을 겪습니다.',
     imageLeft: '/images/newvision/newvision-card2.png',
     imageRight: '/images/newvision/newvision-card5.png',
   },
   {
     title: '비효율적인 반복업무',
-    desc: '각 보험사 사이트에서 계약 · 수수료 데이터를 다운받아<br/>다시 등록해야하는 비효율적인 업무가 여전히 존재합니다.',
+    desc: '각 보험사 사이트에서 계약·수수료 데이터를 내려받아 다시 등록해야 하는 비효율적인 업무가 여전히 존재합니다.',
     imageLeft: '/images/newvision/newvision-card3.png',
     imageRight: '/images/newvision/newvision-card6.png',
   }

@@ -15,9 +15,9 @@ export const SITE_CONFIG = {
   locale: 'ko_KR',
   
   // URL 및 이미지
-  baseUrl: 'https://fingate.kr/',
+  baseUrl: process.env.NUXT_PUBLIC_BASE_URL || 'https://fingate.kr/',
   defaultImage: '/images/services/service2-hero.png',
-  favicon: '/favicon.svg',
+  favicon: `${process.env.NUXT_APP_BASE_URL || '/'}favicon.svg`,
   
   // 테마
   themeColor: '#2563eb',
@@ -45,7 +45,7 @@ export const SITE_CONFIG = {
   // SEO 기본값
   seo: {
     type: 'website',
-    robots: 'index,follow',
+    robots: process.env.NUXT_PUBLIC_ROBOTS || 'index,follow',
     image: '/images/services/service2-hero.png'
   }
 

@@ -4,8 +4,7 @@
       <div class="section-header">
         <div class="section-subtitle">Our Strength</div>
         <p class="section-title mt-24">
-          우리가 세운 가치는<br>
-          우리의 경쟁력이 되었습니다.</p>
+          우리가 세운 가치는 우리의 경쟁력이 되었습니다.</p>
       </div>
       <div class="carousel-nav-container">
         <button 
@@ -89,13 +88,13 @@ const slides: SlideItem[] = [
     src: '/images/company/company-card1.png',
     title: '금융 IT에 최적화된 기술력',
     desc:
-      '핀게이트는 MSA 아키텍처, IAM·SSO 기반 보안, CDP와 빅데이터 분석, 실시간 보험 상품 설계, 딥러닝 추천,<br/> 소켓 메시징 처리 등 금융 IT 환경에 특화된 핵심 기술 역량을 보유하고 있습니다.',
+      '핀게이트는 MSA 아키텍처, IAM·SSO 기반 보안, CDP와 빅데이터 분석, 실시간 보험 상품 설계, 딥러닝 추천, 소켓 메시징 처리 등 금융 IT 환경에 특화된 핵심 기술 역량을 보유하고 있습니다.',
   },
   {
     src: '/images/company/company-card2.png',
     title: '인하우스 경험 기반 전문성',
     desc:
-      'GA 보험 인하우스 경험이 있는 IT 전문가들이 함께 참여하여 고객사의 요구사항을 정확하게 파악하고<br/> 효과적인 IT솔루션을 제시합니다.',
+      'GA 보험 인하우스 경험이 있는 IT 전문가들이 함께 참여하여 고객사의 요구사항을 정확하게 파악하고 효과적인 IT 솔루션을 제시합니다.',
   },
   {
     src: '/images/company/company-card3.png',

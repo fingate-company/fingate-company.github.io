@@ -11,7 +11,7 @@ export const SEO_DEFAULTS = {
   keywords: '인슈어테크, 보험IT, 핀게이트, 보험시스템, Cloud, MSA, 통합시스템, GA시스템, 원스톱상담솔루션',
   image: SITE_CONFIG.defaultImage,
   type: 'website',
-  robots: 'index,follow',
+  robots: SITE_CONFIG.seo.robots,
   locale: 'ko_KR'
 } as const
 
@@ -36,6 +36,11 @@ export const PAGE_SEO = {
     title: '원스톱 상담지원 솔루션 - 핀게이트',
     description: '보험 상담을 위한 원스톱 솔루션입니다. 템플릿 기반 자동화, 맞춤형 비교·분석 리포트, 인사/위촉후보자 관리, 임차/자산 관리, 채권추심, 준법 등 경영지원 및 통합지원 솔루션을 제공합니다.',
     keywords: '원스톱상담솔루션, 보험상담시스템, 템플릿자동화, 비교분석리포트, 경영지원솔루션, 통합지원시스템, 인사관리, 자산관리, 고객관리, 핀게이트'
+  },
+  'services/ax': {
+    title: 'AX 개발·전환 서비스 - 핀게이트',
+    description: '핀게이트는 AX 진단·컨설팅부터 AX 기반 신규 구축, 운영을 이어가는 레거시 AX 전환, 조직 내재화까지 수행합니다. 기준과 승인으로 통제되는 AI 개발 체계를 확인하세요.',
+    keywords: 'AX개발, AX전환, AX컨설팅, AI개발, AI전환, 레거시전환, 레거시현대화, AI네이티브개발, 소프트웨어개발, 업무시스템개발, AX내재화, 핀게이트'
   },
   newvision: {
     title: '새로운 비전 - 핀게이트',

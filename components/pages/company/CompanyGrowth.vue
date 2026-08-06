@@ -4,8 +4,7 @@
       <div class="section-header">
         <div class="section-subtitle">Rooted in Values, Built for Growth</div>
         <h2 id="growth-heading" class="section-title mt-24">
-          핀게이트가 지향하는 가치는<br/>
-          모든 활동의 출발점이자 성장의 기반입니다.
+          핀게이트가 지향하는 가치는 모든 활동의 출발점이자 성장의 기반입니다.
         </h2>
       </div>
       
@@ -48,22 +47,22 @@ let gsapContext: gsap.Context | null = null
 const valueCards = [
   {
     title: 'TRUST',
-    description: '고객과의 신뢰를<br/>최우선으로 생각합니다.',
+    description: '고객과의 신뢰를 최우선으로 생각합니다.',
     icon: '/images/company/company-icon1.svg'
   },
   {
     title: 'EXPERTISE',
-    description: '보험 산업에 대한 깊은 이해와<br/>풍부한 경험을 보유합니다.',
+    description: '보험 산업에 대한 깊은 이해와 풍부한 경험을 보유합니다.',
     icon: '/images/company/company-icon2.svg'
   },
   {
     title: 'INNOVATION',
-    description: '끊임없는 IT 연구로<br/>보험 산업의 혁신을 실현합니다.',
+    description: '끊임없는 IT 연구로 보험 산업의 혁신을 실현합니다.',
     icon: '/images/company/company-icon3.svg'
   },
   {
     title: 'PARTNERSHIP',
-    description: '고객과 함께 성장을 도모하는<br/>IT 파트너입니다.',
+    description: '고객과 함께 성장을 도모하는 IT 파트너입니다.',
     icon: '/images/company/company-icon4.svg'
   }
 ]

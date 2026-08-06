@@ -4,7 +4,7 @@
       <div class="services-header">
         <div class="hero-header" ref="heroHeaderRef">
           <div class="hero-subtitle">SERVICES</div>
-          <h2 id="services-heading" class="hero-title mt-20">보험의 비즈니스<br>가치를 높이는<br>디지털 솔루션</h2>
+          <h2 id="services-heading" class="hero-title mt-20">보험의 비즈니스 가치를 높이는 디지털 솔루션</h2>
           <p class="hero-desc mt-40">우리의 서비스로 고객의 성공을 앞당깁니다.</p>
           <NuxtLink to="/services/service1" class="button mt-120" aria-label="서비스 상세 페이지로 이동">MORE VIEW</NuxtLink>
         </div>
@@ -30,7 +30,9 @@
           </div>
           <div class="card-text">
             <h3 class="card-title">{{ card.title }}</h3>
-            <div class="card-desc mt-24" v-html="card.desc"></div>
+            <ul class="card-desc mt-24">
+              <li v-for="item in card.desc" :key="item">{{ item }}</li>
+            </ul>
           </div>
         </NuxtLink>
       </div>
@@ -50,27 +52,33 @@ if (typeof window !== 'undefined') {
 const serviceCards = [
   {
     title: '영업지원 솔루션',
-    desc: '배정 DB 관리<br/>상담/계약관리<br/>교육/영업 평가 관리<br/>수수료',
+    desc: ['배정 DB 관리', '상담·계약 관리', '교육·영업 평가 관리', '수수료 관리'],
     image: '/images/main/main-card6.png',
     to: '/services/service1'
   },
   {
     title: '경영지원 솔루션',
-    desc: '인사/위촉후보자 관리<br/>임차/자산 관리<br/>채권추심<br/>준법',
+    desc: ['인사·위촉 후보자 관리', '임차·자산 관리', '채권 추심', '준법 관리'],
     image: '/images/main/main-card7.png',
     to: '/services/service1'
   },
   {
     title: '통합지원 솔루션',
-    desc: 'DB 운영<br/>권한/상품 관리<br/>통합 고객 관리<br/>캠페인/민원 관리',
+    desc: ['DB 운영', '권한·상품 관리', '통합 고객 관리', '캠페인·민원 관리'],
     image: '/images/main/main-card8.png',
     to: '/services/service1'
   },
   {
     title: '인슈어테크 솔루션',
-    desc: '보장분석<br/>보험추천<br/>상품설계<br/>보험비교',
+    desc: ['보장 분석', '보험 추천', '상품 설계', '보험 비교'],
     image: '/images/main/main-card9.png',
     to: '/services/service2'
+  },
+  {
+    title: 'AX 개발·전환',
+    desc: ['AX 진단·컨설팅', '신규 서비스 구축', '레거시 AX 전환', '내재화·운영'],
+    image: '/images/ax/ax-hero.png',
+    to: '/services/ax'
   }
 ]
 

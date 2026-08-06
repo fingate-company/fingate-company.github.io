@@ -26,7 +26,8 @@ $color-border-quaternary: #DDDDDD;
 $font-family-primary: 'Pretendard Variable', 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
 $font-family-secondary: 'Poppins', 'Pretendard Variable', 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
 
-$font-size-base: 1rem;
+$font-size-min: 1.5rem;
+$font-size-base: $font-size-min;
 
 $font-weight-light: 300;
 $font-weight-normal: 400;
@@ -37,7 +38,10 @@ $font-weight-bold: 700;
 // 컨테이너 설정
 $container-max-width: 1400px;
 $container-max-width-xl: 1680px;
-$container-padding: 0;
+$container-padding: clamp(2rem, 4vw, 4rem);
 
 // 브레이크포인트
+$breakpoint-sm: 640px;
+$breakpoint-md: 900px;
+$breakpoint-lg: 1200px;
 $breakpoint-xl: 2560px;
