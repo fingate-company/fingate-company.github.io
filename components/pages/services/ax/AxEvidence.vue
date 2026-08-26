@@ -5,13 +5,13 @@
         <header class="ax-section__header" data-ax-reveal>
           <p class="ax-eyebrow ax-eyebrow--light">BEFORE / AFTER</p>
           <h2 id="ax-evidence-heading">
-            실제 투입 곡선 위에서,<br />
+            실제 투입 공수 위에서,<br />
             AX 효과를 다시 계산했습니다.
           </h2>
         </header>
         <p class="ax-evidence__lead" data-ax-reveal>
-          <span>15개월의 실제 투입 기록과 동일 범위의 AX 재산정을 월별로 겹쳐 보았습니다.</span>
-          <span>줄어드는 공수와 새로 생기는 통제 공수까지 모두 포함했습니다.</span>
+          <span>자사 GA솔루션 ‘EPIKA'의 실제 투입 기록과 동일한 범위의 AX 재산정 결과를 월별로 비교분석 했습니다</span>
+          <span>이 분석에는 감소하는 공수와 추가되는 통제 공수 모두가 포함되었습니다.</span>
         </p>
       </div>
 
@@ -19,33 +19,33 @@
         <div class="ax-evidence__comparison-head">
           <div>
             <span class="ax-evidence__kicker">ACTUAL / SIMULATED</span>
-            <h3 id="change-chart-title">동일 범위 월별 투입 곡선</h3>
+            <h3 id="change-chart-title">동일 범위 월별 투입 공수</h3>
           </div>
           <p>
-            <span>G사 GA 통합관리시스템의 PC·모바일 전 범위 기준입니다.</span>
-            <span>기능과 품질 범위는 동일하게 두었습니다.</span>
+            <span>자사 GA솔루션(EPIKA)의 PC, 모바일 전 범위 기준.</span>
+            <span>기능과 품질은 동일하게 유지했습니다.</span>
           </p>
         </div>
 
         <dl class="ax-evidence__summary ax-evidence__summary--three" aria-label="실투입과 AX 재산정 핵심 비교">
           <div>
             <dt>총 수행 기간</dt>
-            <dd><s>15개월</s> 12개월 <em>3개월 단축</em></dd>
+            <dd><s>14개월</s> 12개월 <em>2개월 단축</em></dd>
           </div>
           <div class="ax-evidence__summary-result">
             <dt>총 투입 공수</dt>
-            <dd><s>317.5</s> 191.5 M/M <em>126 M/M 절감</em></dd>
+            <dd><s>232</s> 139.9 M/M <em>92.1 M/M 절감</em></dd>
           </div>
           <div>
             <dt>최대 동시 투입</dt>
-            <dd><s>30명</s> 19명 <em>11명 축소</em></dd>
+            <dd><s>19명</s> 13.9명 <em>5.1명 축소</em></dd>
           </div>
         </dl>
 
         <p class="ax-evidence__conversion">
-          <span>실투입 77,470 M/D</span>
+          <span>실투입 232 M/M</span>
           <i aria-hidden="true"></i>
-          <span>AX 재산정 46,726 M/D</span>
+          <span>AX 재산정 139.9 M/M</span>
           <strong>39.7% 감소</strong>
         </p>
 
@@ -62,7 +62,7 @@
             <span>각 노드의 합계가 총 투입 공수입니다.</span>
           </figcaption>
 
-          <p class="ax-model-chart__scroll-hint" aria-hidden="true">그래프를 좌우로 움직여 15개월 전체를 확인할 수 있습니다.</p>
+          <p class="ax-model-chart__scroll-hint" aria-hidden="true">그래프를 좌우로 움직여 14개월 전체를 확인할 수 있습니다.</p>
 
           <div class="ax-model-chart__viewport">
             <svg
@@ -73,8 +73,8 @@
             >
               <title id="effort-chart-title">AS-IS 실제 투입과 AX TO-BE 월별 투입 비교</title>
               <desc id="effort-chart-description">
-                AS-IS 실제 투입은 15개월 동안 총 317.5 M/M이며 최대 30명입니다.
-                동일 범위의 AX TO-BE 재산정은 12개월 동안 총 191.5 M/M이며 최대 19명입니다.
+                AS-IS 실제 투입은 14개월 동안 총 232 M/M이며 최대 19명입니다.
+                동일 범위의 AX TO-BE 재산정은 12개월 동안 총 139.9 M/M이며 최대 13.9명입니다.
               </desc>
 
               <defs>
@@ -130,24 +130,24 @@
                 class="ax-model-chart__peak-line ax-model-chart__peak-line--actual"
                 :x1="plot.left"
                 :x2="plot.right"
-                :y1="yPosition(30)"
-                :y2="yPosition(30)"
+                :y1="yPosition(19)"
+                :y2="yPosition(19)"
                 aria-hidden="true"
               />
-              <text class="ax-model-chart__peak-label ax-model-chart__peak-label--actual" :x="plot.right - 8" :y="yPosition(30) - 12" text-anchor="end">
-                실측 최대 30명
+              <text class="ax-model-chart__peak-label ax-model-chart__peak-label--actual" :x="plot.right - 8" :y="yPosition(19) - 12" text-anchor="end">
+                실측 최대 19명
               </text>
 
               <line
                 class="ax-model-chart__peak-line ax-model-chart__peak-line--simulated"
                 :x1="plot.left"
                 :x2="shortenedZoneX"
-                :y1="yPosition(19)"
-                :y2="yPosition(19)"
+                :y1="yPosition(13.9)"
+                :y2="yPosition(13.9)"
                 aria-hidden="true"
               />
-              <text class="ax-model-chart__peak-label ax-model-chart__peak-label--simulated" :x="shortenedZoneX - 12" :y="yPosition(19) - 12" text-anchor="end">
-                AX 예상 최대 19명
+              <text class="ax-model-chart__peak-label ax-model-chart__peak-label--simulated" :x="shortenedZoneX - 12" :y="yPosition(13.9) - 12" text-anchor="end">
+                AX 예상 최대 13.9명
               </text>
 
               <g class="ax-model-chart__endpoint" aria-hidden="true">
@@ -157,8 +157,8 @@
               </g>
 
               <text class="ax-model-chart__shortened-label" :x="(shortenedZoneX + plot.right) / 2" :y="plot.top + 54" text-anchor="middle">
-                <tspan :x="(shortenedZoneX + plot.right) / 2">M13-M15</tspan>
-                <tspan :x="(shortenedZoneX + plot.right) / 2" dy="25">3개월 단축 구간</tspan>
+                <tspan :x="(shortenedZoneX + plot.right) / 2">M13-M14</tspan>
+                <tspan :x="(shortenedZoneX + plot.right) / 2" dy="25">2개월 단축 구간</tspan>
               </text>
 
               <g class="ax-model-chart__x-axis" aria-hidden="true">
@@ -237,7 +237,7 @@
           <p>
             <strong>AS-IS · 실측</strong>
             <span>당시 프로젝트를 수행한 실무 인력의 월별 실제 투입을 합산했습니다.</span>
-            <span>317.5 M/M · 77,470 M/D입니다.</span>
+            <span>232 M/M입니다.</span>
           </p>
           <p>
             <strong>TO-BE · 재산정</strong>
@@ -277,10 +277,10 @@ const plot = {
   height: 400
 }
 
-const maximumPeople = 32
-const yTicks = [0, 10, 20, 30]
-const asIsMonthly = [6, 12, 18, 30, 30, 28, 28, 28, 26.5, 26.5, 26.5, 22, 12, 12, 12]
-const toBeMonthly = [11, 11, 18, 18, 19, 16.5, 16.5, 16.5, 16.5, 16.5, 16, 16]
+const maximumPeople = 20
+const yTicks = [0, 5, 10, 15, 20]
+const asIsMonthly = [14, 14, 14, 16, 16, 16, 19, 18, 17.5, 17.5, 17.5, 17.5, 17.5, 17.5]
+const toBeMonthly = [8, 8, 13.1, 13.1, 13.9, 12.1, 12.1, 12.1, 12.1, 12.1, 11.7, 11.6]
 
 const yPosition = (people: number) => plot.bottom - (people / maximumPeople) * plot.height
 const xPosition = (index: number) => plot.left + (index / (asIsMonthly.length - 1)) * plot.width
@@ -307,9 +307,9 @@ const toBeAreaPoints = [
 ].join(' ')
 
 const workTypes = [
-  { label: '만드는 일', roles: '개발 · 퍼블리싱 · 디자인', before: 224, after: 101, change: '-55%' },
-  { label: '판단하는 일', roles: '기획 · 설계 · PMO', before: 73.5, after: 61.5, change: '-16%' },
-  { label: '기반', roles: '인프라', before: 20, after: 17, change: '-15%' },
+  { label: '만드는 일', roles: '개발 · 퍼블리싱 · 디자인', before: 172, after: 77.4, change: '-55%' },
+  { label: '판단하는 일', roles: '기획 · 설계 · PMO', before: 51, after: 42.8, change: '-16%' },
+  { label: '기반', roles: '인프라', before: 9, after: 7.7, change: '-15%' },
   { label: '통제', roles: '검사 · 승인 운영', before: 0, after: 12, change: '신설' }
 ].map((item) => {
   const maximum = Math.max(item.before, item.after)
@@ -321,13 +321,13 @@ const workTypes = [
 })
 
 const roles = [
-  { label: 'PMO', before: 15, after: 12, change: '-3', reason: '진척·이슈 자동 집계로 취합과 보고 공수를 줄입니다.' },
+  { label: 'PMO', before: 14, after: 11.8, change: '-2.2', reason: '진척·이슈 자동 집계로 취합과 보고 공수를 줄입니다.' },
   { label: 'AX 리더', before: 0, after: 12, change: '+12 · 신설', reason: '검사·승인 게이트와 기준 문서를 운영합니다.' },
-  { label: '기획', before: 43, after: 36, change: '-7', reason: '사람이 기준을 정하고 화면·정책 전개와 변경 반영은 자동화합니다.' },
-  { label: '디자인', before: 17, after: 10, change: '-7', reason: '디자인 시스템을 기준으로 화면 변형과 반응형 대응을 생성합니다.' },
-  { label: '퍼블리싱', before: 23, after: 7, change: '-16', reason: '화면 코드는 기준 문서에서 만들고 사람은 검수와 예외를 처리합니다.' },
-  { label: '설계', before: 15.5, after: 13.5, change: '-2', reason: '판단 공수는 유지하고 정합성 검사만 자동화합니다.' },
-  { label: '개발', before: 184, after: 84, change: '-100', reason: '생성·검사·수정 루프를 자동화하고 사람은 리뷰와 통합을 맡습니다.' },
-  { label: '인프라', before: 20, after: 17, change: '-3', reason: '환경 구성과 배포 파이프라인의 반복 작업을 줄입니다.' }
+  { label: '기획', before: 28, after: 23.5, change: '-4.5', reason: '사람이 기준을 정하고 화면·정책 전개와 변경 반영은 자동화합니다.' },
+  { label: '디자인', before: 11, after: 5, change: '-6', reason: '디자인 시스템을 기준으로 화면 변형과 반응형 대응을 생성합니다.' },
+  { label: '퍼블리싱', before: 21, after: 9.4, change: '-11.6', reason: '화면 코드는 기준 문서에서 만들고 사람은 검수와 예외를 처리합니다.' },
+  { label: '설계', before: 9, after: 7.5, change: '-1.5', reason: '판단 공수는 유지하고 정합성 검사만 자동화합니다.' },
+  { label: '개발', before: 140, after: 63, change: '-77', reason: '생성·검사·수정 루프를 자동화하고 사람은 리뷰와 통합을 맡습니다.' },
+  { label: '인프라', before: 9, after: 7.7, change: '-1.3', reason: '환경 구성과 배포 파이프라인의 반복 작업을 줄입니다.' }
 ]
 </script>

@@ -5,12 +5,10 @@
     <div class="container ax-contact__inner" data-ax-reveal>
       <p class="ax-eyebrow ax-eyebrow--light">START YOUR AX JOURNEY</p>
       <h2 id="ax-contact-heading">
-        귀사의 작은 과제에서,<br />
-        귀사의 숫자를 확인해 보세요
+        작은 과제에서부터 숫자를 확인해 보세요
       </h2>
       <p>
-        현재 시스템과 고민을 알려주시면 AX 적용 가능 범위와<br />
-        가장 작게 검증할 수 있는 시작점을 함께 찾겠습니다.
+        AX적용 가능 범위와 작게 검증할 수 있는 시작점을 함께 찾겠습니다.
       </p>
       <NuxtLink to="/contact" class="ax-button ax-button--primary">
         문의하기

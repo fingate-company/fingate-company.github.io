@@ -24,8 +24,8 @@
       </div>
 
       <p class="ax-problem__statement" data-ax-reveal>
-        세 장면의 공통점은 <strong>사람이나 도구</strong>가 아닙니다.<br />
-        전달하고 확인하고 결정하는 방식이 그대로라는 것입니다.
+        공통적인 문제점은 <strong class="ax-problem__underline">사람이나 도구</strong>가 아닙니다.<br />
+        개별 구성원의 역량 문제가 아닌, <strong>전통적인 인력 중심 모델이 내포한 구조적 제약</strong> 입니다.
       </p>
     </div>
   </section>
