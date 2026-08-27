@@ -103,7 +103,8 @@ const businessButtons = [
   { label: '시스템 통합·관리' },
   { label: '보험 솔루션 개발' },
   { label: '솔루션 유통' },
-  { label: 'IT 아웃소싱 및 컨설팅' }
+  { label: 'IT 아웃소싱 및 컨설팅' },
+  { label: 'AX 개발·전환' }
 ]
 
 const businessContents = [
@@ -212,6 +213,28 @@ const businessContents = [
       {
         icon: '/images/company/company-icon25.svg',
         title: '시스템 유지보수 최적화',
+      }
+    ]
+  },
+  {
+    title: 'AX 개발 · 전환',
+    backgroundImage: '/images/ax/ax-hero.png',
+    cards: [
+      {
+        icon: '/images/company/company-icon22.svg',
+        title: 'AX 진단·컨설팅',
+      },
+      {
+        icon: '/images/company/company-icon5.svg',
+        title: 'AX 기반 신규 구축',
+      },
+      {
+        icon: '/images/company/company-icon25.svg',
+        title: '레거시 AX 전환',
+      },
+      {
+        icon: '/images/company/company-icon21.svg',
+        title: 'AX 내재화·운영 전환',
       }
     ]
   }

@@ -82,8 +82,14 @@ interface CarouselControl {
 const containerRef = ref<HTMLElement | null>(null)
 const carouselRef = ref<HTMLElement | null>(null)
 
-// 원본 슬라이드 데이터 (3장)
+// 원본 슬라이드 데이터 (AX 기본 카드 포함 4장)
 const slides: SlideItem[] = [
+  {
+    src: '/images/ax/ax-hero.png',
+    title: 'AI가 일하는 AX 수행 체계',
+    desc:
+      '기획, 디자인, 개발, 검증, 운영의 모든 단계를 하나의 기준으로 연결하여 AI 수행, 자동 검증, 사람 승인이 이어지는 개발 체계를 구축합니다.',
+  },
   {
     src: '/images/company/company-card1.png',
     title: '금융 IT에 최적화된 기술력',

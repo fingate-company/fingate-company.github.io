@@ -1089,6 +1089,10 @@
         min-width: 0;
         width: 100%;
       }
+
+      .button:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+      }
     }
 
     .container .business-content .content-overlay {
