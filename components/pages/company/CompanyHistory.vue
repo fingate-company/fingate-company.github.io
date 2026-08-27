@@ -54,6 +54,13 @@ type YearData = { year: string; events: { month: string; text: string }[] }
 
 const historyData: YearData[] = [
   {
+    year: '2026',
+    events: [
+      { month: '08', text: '<b>원스톱 상담지원 솔루션</b> 봄봄 출시' },
+      { month: '01', text: '<b>HK금융파트너스</b> GA통합지원시스템 구축' }
+    ]
+  },
+  {
     year: '2025',
     events: [
       { month: '09', text: '<b>GA통합지원솔루션</b> EPIKA 2.0 출시' },
