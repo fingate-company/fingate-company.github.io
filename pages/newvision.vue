@@ -38,4 +38,5 @@ import NewvisionContact from '~/components/pages/newvision/NewvisionContact.vue'
 // SEO 메타데이터 (중앙화된 관리)
 const seoData = useSEO('newvision')
 useHead(seoData)
+useHead({ bodyAttrs: { class: 'newvision-page' } })
 </script>

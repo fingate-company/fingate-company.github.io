@@ -9,20 +9,22 @@
 // 뉴비전 페이지 (newvision)
 // ========================================
 
+body.newvision-page {
+  // 별도 스크롤 컨테이너를 만들지 않아 아젠다의 sticky가 뷰포트를 기준으로 동작한다.
+  overflow-x: clip;
+}
+
 .newvision {
   position: relative;
   
   .content-section {
     position: relative;
     background: url('/images/newvision/newvision-bg.png') center top / cover no-repeat;
-    aspect-ratio: 1920 / 6650; /* AX 연결 섹션을 포함한 비율 유지 */
+    // 섹션 추가/삭제 및 화면 폭에 관계없이 실제 콘텐츠로 높이를 결정한다.
+    aspect-ratio: auto;
     transition: all 0.3s ease;
     content-visibility: auto;
     contain-intrinsic-size: auto 5000px;
-    
-    @media (min-width: 2560px) {
-      aspect-ratio: 1920 / 5750;
-    }
     
     .section-subtitle {
       letter-spacing: 0.105rem;
