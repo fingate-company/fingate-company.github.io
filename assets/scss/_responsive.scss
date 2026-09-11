@@ -50,6 +50,68 @@
   .service2-report .report-content-wrapper {
     width: calc(100% - 8rem);
   }
+
+  // 중앙 문구의 의미 단위가 유지되도록 태블릿부터 이미지 아래에 배치한다.
+  .newvision-agenda {
+    .agenda-cards-container {
+      padding-top: 11rem;
+    }
+
+    .agenda-unified-area {
+      display: none;
+    }
+
+    .agenda-mobile-list {
+      display: grid;
+      gap: 2rem;
+      max-width: 80rem;
+      margin-top: 6.4rem;
+      margin-inline: auto;
+    }
+
+    .agenda-mobile-card {
+      padding: 2rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 2.4rem;
+      background: rgba(30, 46, 65, 0.44);
+      color: $color-text-white;
+
+      &__images {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+
+        img {
+          width: 100%;
+          aspect-ratio: 1 / 1;
+          border-radius: 1.6rem;
+          object-fit: cover;
+        }
+      }
+
+      h3 {
+        margin-top: 2.8rem;
+        font-size: 2.4rem;
+        font-weight: $font-weight-semibold;
+      }
+
+      p {
+        margin-top: 1.6rem;
+        color: rgba(255, 255, 255, 0.72);
+        font-size: 1.6rem;
+        line-height: 1.7;
+        text-wrap: balance;
+      }
+
+      .agenda-copy-line {
+        display: block;
+      }
+    }
+  }
+
+  .newvision-nextstep .container {
+    margin-top: 11rem;
+  }
 }
 
 @media (max-width: 900px) {
@@ -493,61 +555,7 @@
   }
 
   /* New Vision */
-  .newvision-agenda {
-    .agenda-cards-container {
-      padding-top: 11rem;
-    }
-
-    .agenda-unified-area {
-      display: none;
-    }
-
-    .agenda-mobile-list {
-      display: grid;
-      gap: 2rem;
-      margin-top: 6.4rem;
-    }
-
-    .agenda-mobile-card {
-      padding: 2rem;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 2.4rem;
-      background: rgba(30, 46, 65, 0.44);
-      color: $color-text-white;
-
-      &__images {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 1rem;
-
-        img {
-          width: 100%;
-          aspect-ratio: 1 / 1;
-          border-radius: 1.6rem;
-          object-fit: cover;
-        }
-      }
-
-      h3 {
-        margin-top: 2.8rem;
-        font-size: 2.4rem;
-        font-weight: $font-weight-semibold;
-      }
-
-      p {
-        margin-top: 1.6rem;
-        color: rgba(255, 255, 255, 0.72);
-        font-size: 1.6rem;
-        line-height: 1.7;
-      }
-    }
-  }
-
   .newvision-nextstep {
-    .container {
-      margin-top: 11rem;
-    }
-
     .point-cards {
       grid-template-columns: repeat(2, minmax(0, 1fr));
 

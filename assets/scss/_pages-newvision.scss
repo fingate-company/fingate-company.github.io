@@ -132,7 +132,19 @@ body.newvision-page {
 
 // --- 아젠다 섹션 ---
 .newvision-agenda {
+  --agenda-card-width: clamp(24rem, 22vw, 33.2rem);
+  --agenda-card-height: calc(var(--agenda-card-width) * 360 / 332);
+  --agenda-copy-gap: clamp(2.4rem, 2.5vw, 4.8rem);
   position: relative;
+
+  @media (min-width: 2560px) {
+    --agenda-card-width: 41.5rem;
+    --agenda-copy-gap: 6rem;
+  }
+
+  .agenda-phrase {
+    white-space: nowrap;
+  }
   
   .container {
     position: relative;
@@ -172,7 +184,9 @@ body.newvision-page {
     
     .card-center-text {
       position: absolute;
+      width: calc(100% - 2 * (var(--agenda-card-width) + var(--agenda-copy-gap)));
       text-align: center;
+      word-break: keep-all;
       opacity: 0;
       
       .card-title {
@@ -191,11 +205,14 @@ body.newvision-page {
         font-size: 2rem;
         font-weight: $font-weight-light;
         color: $color-text-white;
-        line-height: 2.8rem;
+        line-height: 3.2rem;
+        // 의미 단위로 지정한 줄바꿈을 유지하고, 어절 내부는 나누지 않는다.
+        white-space: pre-line;
+        text-wrap: balance;
         
         @media (min-width: 2560px) {
           font-size: 2.5rem;
-          line-height: 3.5rem;
+          line-height: 4rem;
         }
       }
     }
@@ -218,16 +235,13 @@ body.newvision-page {
       .card-image {
         position: absolute;
         top: 50%;
-        margin-top: -18rem;
-        width: 33.2rem;
-        height: 36rem;
+        margin-top: calc(var(--agenda-card-height) / -2);
+        width: var(--agenda-card-width);
+        height: var(--agenda-card-height);
         border-radius: 2.4rem;
         overflow: hidden;
         
         @media (min-width: 2560px) {
-          margin-top: -23rem;
-          width: 41.5rem;
-          height: 45rem;
           border-radius: 3rem;
         }
         

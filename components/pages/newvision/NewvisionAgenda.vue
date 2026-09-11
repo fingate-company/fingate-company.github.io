@@ -19,8 +19,12 @@
               class="card-center-text"
               :class="`card-text-${index + 1}`"
             >
-              <h3 class="card-title">{{ card.title }}</h3>
-              <p class="card-desc mt-32">{{ card.desc }}</p>
+              <h3 class="card-title">
+                <template v-for="(part, partIndex) in card.titleParts" :key="part">
+                  <span class="agenda-phrase">{{ part }}</span>{{ partIndex < card.titleParts.length - 1 ? ' ' : '' }}
+                </template>
+              </h3>
+              <p class="card-desc mt-32">{{ card.descLines.join('\n') }}</p>
             </div>
           </div>
 
@@ -60,8 +64,20 @@
               <img :src="card.imageLeft" :alt="`${card.title} 사례 이미지 1`" loading="lazy" />
               <img :src="card.imageRight" :alt="`${card.title} 사례 이미지 2`" loading="lazy" />
             </div>
-            <h3>{{ card.title }}</h3>
-            <p>{{ card.desc }}</p>
+            <h3>
+              <template v-for="(part, partIndex) in card.titleParts" :key="part">
+                <span class="agenda-phrase">{{ part }}</span>{{ partIndex < card.titleParts.length - 1 ? ' ' : '' }}
+              </template>
+            </h3>
+            <p>
+              <template v-for="(parts, lineIndex) in card.descParts" :key="lineIndex">
+                <span class="agenda-copy-line">
+                  <template v-for="(phrase, phraseIndex) in parts" :key="phrase">
+                    <span class="agenda-phrase">{{ phrase }}</span>{{ phraseIndex < parts.length - 1 ? ' ' : '' }}
+                  </template>
+                </span>{{ lineIndex < card.descParts.length - 1 ? ' ' : '' }}
+              </template>
+            </p>
           </article>
         </div>
       </div>
@@ -86,26 +102,41 @@ const cardImagesWrapper = ref<HTMLElement | null>(null)
 const headerRef = ref<HTMLElement | null>(null)
 const activeCardIndex = ref(0)
 
+// 각 행은 의미 단위의 줄바꿈이며, 내부 구절은 좁은 화면에서도 함께 유지한다.
 const agendaCards = [
   {
-    title: '복잡한 보장 분석',
-    desc: '보험사별로 흩어진 정보를 확인하기 위해 설계사는 여러 전산을 오가야 하므로, 한 번에 비교·분석하기 어렵습니다.',
+    titleParts: ['복잡한', '보장 분석'],
+    descParts: [
+      ['보험사별로 흩어진 정보를', '확인하기 위해'],
+      ['설계사는 여러 전산을', '오가야 하므로,'],
+      ['한 번에', '비교·분석하기 어렵습니다.']
+    ],
     imageLeft: '/images/newvision/newvision-card1.png',
     imageRight: '/images/newvision/newvision-card4.png',
   },
   {
-    title: '불안정한 신규 설계사 온보딩',
-    desc: '신규 설계사는 경험 부족으로 초기 실수가 잦아 안정적인 고객 관리와 정착에 어려움을 겪습니다.',
+    titleParts: ['불안정한', '신규 설계사 온보딩'],
+    descParts: [
+      ['신규 설계사는', '경험 부족으로', '초기 실수가 잦아'],
+      ['안정적인 고객 관리와', '정착에 어려움을 겪습니다.']
+    ],
     imageLeft: '/images/newvision/newvision-card2.png',
     imageRight: '/images/newvision/newvision-card5.png',
   },
   {
-    title: '비효율적인 반복업무',
-    desc: '각 보험사 사이트에서 계약·수수료 데이터를 내려받아 다시 등록해야 하는 비효율적인 업무가 여전히 존재합니다.',
+    titleParts: ['비효율적인', '반복업무'],
+    descParts: [
+      ['각 보험사 사이트에서', '계약·수수료 데이터를 내려받아'],
+      ['다시 등록해야 하는', '비효율적인 업무가', '여전히 존재합니다.']
+    ],
     imageLeft: '/images/newvision/newvision-card3.png',
     imageRight: '/images/newvision/newvision-card6.png',
   }
-]
+].map(card => ({
+  ...card,
+  title: card.titleParts.join(' '),
+  descLines: card.descParts.map(parts => parts.join(' '))
+}))
 
 let gsapContext: gsap.Context | null = null
 
